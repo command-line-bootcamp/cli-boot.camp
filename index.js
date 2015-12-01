@@ -2,7 +2,6 @@ var url = require('url')
 var querystring = require('querystring')
 var adventureTime = require('adventure-time')
 
-var production = !location.port // a bit hackish but assume production if no custom port
 var qs = url.parse(window.location.href, true).query
 
 if (!qs.id) {
@@ -13,7 +12,7 @@ if (!qs.id) {
 var opts = {
   guide: 'guide/',
   console: 'terminal.html',
-  server: qs.server || (production ? 'docker.try-dat.com' : 'dev.try-dat.com:8080'),
+  server: "46.101.11.144:8080",
   id: qs.id
 }
 
