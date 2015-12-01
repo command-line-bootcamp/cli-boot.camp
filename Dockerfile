@@ -1,4 +1,7 @@
 FROM mafintosh/docker-adventure-time
 
-RUN groupadd -r bootcamp && useradd -r -g bootcamp learner
+RUN useradd -ms /bin/bash learner
 USER learner
+WORKDIR /home/learner
+
+
