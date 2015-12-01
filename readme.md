@@ -1,6 +1,6 @@
-# Unix for biologists
+# Command-line bootcamp
 
-Learn unix for biologists in your browser.
+Learn the unix command-line by using it in your browser.
 
 ### how to run
 
