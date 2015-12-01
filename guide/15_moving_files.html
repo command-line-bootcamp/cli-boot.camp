@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="15-moving-files">15: Moving files</h2>
+<p>Now, let&#39;s assume that we want to move these files to a new directory (&#39;Temp&#39;). We will do this using the Unix <a href="http://en.wikipedia.org/wiki/Mv">mv</a> (move) command. Remember to use tab completion:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ mkdir Temp
+ubuntu@:~/Learning_unix$ mv heaven.txt Temp/
+ubuntu@:~/Learning_unix$ mv earth.txt Temp/
+ubuntu@:~/Learning_unix$ ls
+Temp
+ubuntu@:~/Learning_unix$ ls Temp/
+earth.txt  heaven.txt
+</code></pre>
+<p>For the <code>mv</code> command, we always have to specify a source file (or directory) that we want to move, and then specify a target location. If we had wanted to we could have moved both files in one go by typing any of the following commands:</p>
+<pre><code class="lang-bash">mv *.txt Temp/
+mv *t Temp/
+mv *ea* Temp/
+</code></pre>
+<p>The asterisk <code>*</code> acts as a <a href="http://en.wikipedia.org/wiki/Wildcard_character">wild-card character</a>, essentially meaning &#39;match anything&#39;. The second example works because there are no other files or directories in the directory that end with the letters &#39;t&#39; (if there was, then they would be moved too). Likewise, the third example works because only those two files contain the letters &#39;ea&#39; in their names. Using wild-card characters can save you a lot of typing.</p>
+<p>The &#39;?&#39; character is also a wild-card but with a slightly different meaning. See if you can work out what it does.</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="16_moving_files.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="14_making_files.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

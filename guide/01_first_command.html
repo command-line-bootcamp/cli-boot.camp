@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="01-your-first-unix-command">01. Your first Unix command</h2>
+<p>It&#39;s important to note that you will always be <em>inside</em> a single directory when using the terminal. The default behavior is that when you open a new terminal you start in your own <em>home</em> directory (containing files and directories that only you can modify). To see what files and directories are in our home directory, we need to use the <a href="http://en.wikipedia.org/wiki/Ls">ls</a> command. This command lists the contents of a directory. If we run the <code>ls</code> command we should see something like:</p>
+<pre><code class="lang-bash">ubuntu@:~$ ls
+command_line_course  linux_bootcamp
+ubuntu@:~$
+</code></pre>
+<p>There are four things that you should note here:</p>
+<ol>
+<li>You will probably see different output to what is shown here, it depends on your computer setup. Don&#39;t worry about that for now.</li>
+<li>The <code>ubuntu@:~$</code> text that you see is the Unix <a href="http://en.wikipedia.org/wiki/Command_line_interface">command prompt</a>. In this case, it contains a user name (&#39;ubuntu&#39;) and the name of the current directory (&#39;~&#39;, more on that later). Note that the command prompt might not look the same on different Unix systems. In this case, the <code>$</code> sign marks the end of the prompt.</li>
+<li>The output of the <code>ls</code> command lists two things. In this case, they are both directories, but they could also be files. We&#39;ll learn how to tell them apart later on. These directories were created as part of a specific course that used this bootcamp material. You will therefore probably see something very different on your own computer.</li>
+<li>After the <code>ls</code> command finishes it produces a new command prompt, ready for you to type your next command.</li>
+</ol>
+<p>The <code>ls</code> command is used to list the contents of <em>any</em> directory, not necessarily the one that you are currently in. Try the following:</p>
+<pre><code class="lang-bash">ubuntu@:~$ ls /data
+bioinfo.course.data  command_line_course  galaxy  lost+found  refs
+
+ubuntu@:~$ ls /etc/perl
+CPAN  Net  XML
+</code></pre>
+
+        <div class="navlinks">
+          <a class="nextp button" href="02_the_tree.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="00_frontmatter.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="26-the-path-environment-variable">26: The $PATH environment variable</h2>
+<p>One other use of the <code>echo</code> command is for displaying the contents of something known as <em>environment variables</em>. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ echo $USER
+ubuntu
+ubuntu@:~/Learning_unix$ echo $HOME
+/home/ubuntu
+ubuntu@:~/Learning_unix$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+</code></pre>
+<p>The last one shows the content of the <code>$PATH</code> environment variable, which displays a colon separated list of directories that are expected to contain programs that you can run. This includes all of the Unix commands that you have seen so far. These are files that live in directories which are run like programs (e.g. <code>ls</code> is just a special type of file in the <code>/bin</code> directory).</p>
+<p>Knowing how to change your $PATH to include custom directories can be necessary sometimes (e.g. if you install some new bioinformatics software in a non-standard location).</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="26_matching_lines.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="24_editing_small_files.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="19-copying-files">19: Copying files</h2>
+<p>Copying files with the <a href="http://en.wikipedia.org/wiki/Cp_(Unix)">cp</a> (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let&#39;s create a new file and make a copy of it:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ touch file1
+ubuntu@:~/Learning_unix$ cp file1 file2
+ubuntu@:~/Learning_unix$ ls
+file1  file2
+</code></pre>
+<p>What if we wanted to copy files from a different directory to our current directory? Let&#39;s put a file in our home directory (specified by <code>~</code> remember) and copy it to the current directory (<code>Learning_unix</code>):</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ touch ~/file3
+ubuntu@:~/Learning_unix$ ls ~
+command_line_course  file3  Learning_unix  linux_bootcamp
+ubuntu@:~/Learning_unix$ cp ~/file3 .
+ubuntu@:~/Learning_unix$ ls
+file1  file2  file3
+</code></pre>
+<p>This last step introduces another new concept. In Unix, the current directory can be represented by a <code>.</code> (dot) character. You will mostly use this only for copying files to the current directory that you are in. Compare the following:</p>
+<pre><code class="lang-bash">ls
+ls .
+ls ./
+</code></pre>
+<p>In this case, using the dot is somewhat pointless because <code>ls</code> will already list the contents of the current directory by default. Also note how the trailing slash is optional. You can use <code>rm</code> to remove the temporary files.</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="20_copying_directories.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="18_removing_files.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

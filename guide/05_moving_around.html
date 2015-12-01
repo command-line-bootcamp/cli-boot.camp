@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="05-getting-from-a-to-b-">05: Getting from &#39;A&#39; to &#39;B&#39;</h2>
+<p>We are in the home directory on the computer but we want to to work in the new <code>Learning_unix</code> directory. To change directories in Unix, we use the <a href="http://en.wikipedia.org/wiki/Cd_(command)">cd</a> command:</p>
+<pre><code class="lang-bash">cd Learning_unix
+ubuntu@:~/Learning_unix$
+</code></pre>
+<p>Notice that on this system the command prompt has expanded to include our current directory. This doesn&#39;t happen by default on all Unix systems, but you should know that you can configure what information appears as part of the command prompt.</p>
+<p>Let&#39;s make two new subdirectories and navigate into them:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ mkdir Outer_directory
+ubuntu@:~/Learning_unix$ cd Outer_directory
+ubuntu@:~/Learning_unix/Outer_directory$
+
+ubuntu@:~/Learning_unix/Outer_directory$ mkdir Inner_directory
+ubuntu@:~/Learning_unix/Outer_directory$ cd Inner_directory/
+ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$
+</code></pre>
+<p>Now our command prompt is getting quite long, but it reveals that we are three levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the <code>mkdir</code> command in way to do this all in one step.</p>
+<p>Like most Unix commands, <code>mkdir</code> supports <em>command-line options</em> which let you alter its behavior and functionality. Command-like options are â€”Â as the name suggests â€”Â optional arguments that are placed after the command name. They often take the form of single letters (following a dash). If we had used the <code>-p</code> option of the <code>mkdir</code> command we could have done this in one step. E.g.</p>
+<pre><code class="lang-bash">mkdir -p Outer_directory/Inner_directory
+</code></pre>
+<p><strong><em>Note the spaces either side the <code>-p</code>!</em></strong></p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="06_the_root_directory.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="04_making_directories.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

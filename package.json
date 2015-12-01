@@ -1,0 +1,34 @@
+{
+  "name": "unix_for_biologists",
+  "version": "1.0.0",
+  "description": "an adventure in learning the command-line",
+  "main": "index.js",
+  "scripts": {
+    "render": "submarine markdown guide --template=guide.html",
+    "deploy": "gh-pages-deploy",
+    "build": "browserify index.js -o bundle.js && browserify terminal.js -o terminal-bundle.js",
+    "start": "beefy index.js:bundle.js terminal.js:terminal-bundle.js"
+  },
+  "author": "richard smith-unna",
+  "license": "BSD",
+  "watch": {
+    "build": "workshop/*.md"
+  },
+  "gh-pages-deploy": {
+    "prep": [
+      "build",
+      "render"
+    ],
+    "noprompt": "true"
+  },
+  "dependencies": {
+    "adventure-time": "^1.0.0",
+    "gh-pages-deploy": "^0.1.1",
+    "submarine": "0.2.4"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^6.1.0",
+    "npm-watch": "0.0.0"
+  }
+}

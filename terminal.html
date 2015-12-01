@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dat terminal</title>
+    <style type='text/css'>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-family: monospace;
+      }
+      
+      .container {
+        height: 100%;
+      }
+
+      .terminal {
+        transition: color 0.5s ease;
+      }
+      
+      .terminal-cursor {
+        background-color: color 0.5s ease;
+        background-color: grey;
+      }
+
+      .blur .terminal {
+        color: #bbb !important;
+      }
+
+      .blur .terminal-cursor {
+        background-color: transparent;
+      }
+    </style>
+</head>
+<body>
+  <div class="container console"></div>
+  <script src="terminal-bundle.js" type="text/javascript"></script>
+</body>
+</html>

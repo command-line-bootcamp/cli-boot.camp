@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="09-finding-your-way-back-home">09: Finding your way back home</h2>
+<p>Remember that the command prompt shows you the name of the directory that you are currently in, and that when you are in your home directory it shows you a tilde character (`~``) instead? This is because Unix uses the tilde character as a short-hand way of <a href="http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs">specifying a home directory</a>.</p>
+<p>See what happens when you try the following commands (use the <code>pwd</code> command after each one to confirm the results if necessary):</p>
+<pre><code class="lang-bash">cd /
+cd ~
+cd
+</code></pre>
+<p>Hopefully, you should find that <code>cd</code> and <code>cd ~</code> do the same thing, i.e. they take you back to your home directory (from wherever you were). You will frequently want to jump straight back to your home directory, and typing <code>cd</code> is a very quick way to get there.</p>
+<p>You can also use the <code>~</code> as a quick way of navigating into subdirectories of your home directory when your current directory is somewhere else. I.e. the quickest way of navigating from the root directory to your <code>Learning_unix</code> directory is as follows:</p>
+<pre><code class="lang-bash">ubuntu@:~$ cd /
+ubuntu@:/$ cd ~/Learning_unix
+</code></pre>
+
+        <div class="navlinks">
+          <a class="nextp button" href="10_advanced_ls.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="08_absolute_and_relative.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

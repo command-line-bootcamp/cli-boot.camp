@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="16-renaming-files">16: Renaming files</h2>
+<p>In the earlier example, the destination for the <code>mv</code> command was a directory name (Temp). So we moved a file from its source location to a target location, but note that the target could have also been a (different) file name, rather than a directory. E.g. let&#39;s make a new file and move it whilst renaming it at the same time:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ touch rags
+ubuntu@:~/Learning_unix$ ls
+rags  Temp
+ubuntu@:~/Learning_unix$ mv rags Temp/riches
+ubuntu@:~/Learning_unix$ ls Temp/
+earth.txt  heaven.txt  riches
+</code></pre>
+<p>In this example we create a new file (&#39;rags&#39;) and move it to a new location and in the process change the name (to &#39;riches&#39;). So <code>mv</code> can rename a file as well as move it. The logical extension of this is using <code>mv</code> to rename a file without moving it (you have to use <code>mv</code> to do this as Unix does not have a separate &#39;rename&#39; command):</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
+</code></pre>
+
+        <div class="navlinks">
+          <a class="nextp button" href="17_moving_directories.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="15_moving_files.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{> header }}</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+      {{#if index}}
+        <img width="100%" src="../static/img/datcat.jpeg" />
+        <section class="content">
+        <h1>Welcome!</h1>
+        <p>This is the <strong>command-line bootcamp</strong>, a tutorial that teaches you how to work at the command-line. You'll learn all the basic skills needed to start being productive in the UNIX terminal.</p>
+        <h4>Table of Contents</h4>
+        <div class="jumbotron-horizontal-rule"></div>
+        <ul class="toc-list">
+          {{#index}}
+            <li><a href="{{ href }}">{{ name }}</a></li>
+          {{/index}}
+        </ul>
+        <p>If you look to your right, you'll see there is a terminal that is connected to a <strong>docker container</strong> -- that is a computer, in the cloud but accessible right here in your browser!</p>
+        <p>Below the terminal, there's a filebrowser and an editor. These are connected to the same machine. Every time you type in the editor, the bootcamp automatically saves the file. Groovy.</p>
+      <p><strong>Be aware: When you leave or close this webpage your server will be shut down.</strong></p>
+      <p>Ok, ready to dive in? <a class="nextp button" href="{{index.0.href}}">Let's go! &raquo;</a>
+      </p>
+      </section>
+      {{/if}}
+
+      {{#if content}}
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      {{{ content }}}
+        <div class="navlinks">
+        {{#if next}}
+          <a class="nextp button" href="{{ next }}.html">OK, next! &raquo;</a>
+          {{#if previous}}
+            <a class="lastp navlink" href="{{ previous }}.html">&laquo; back</a>
+          {{/if}}
+        {{/if}}
+        </div>
+      {{/if}}
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

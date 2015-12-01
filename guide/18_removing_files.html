@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="18-removing-files">18: Removing files</h2>
+<p>You&#39;ve seen how to remove a directory with the <code>rmdir</code> command, but <code>rmdir</code> won&#39;t remove directories if they contain any files. So how can we remove the files we have created (inside <code>Learning_Unix/Temp</code>)? In order to do this, we will have to use the <a href="http://en.wikipedia.org/wiki/Rm_(Unix)">rm</a> (remove) command.</p>
+<blockquote>
+<p><strong><em>Please read the next section VERY carefully. Misuse of the <code>rm</code> command can lead to needless death &amp; destruction</em></strong> </p>
+</blockquote>
+<p>Potentially, <code>rm</code> is a very dangerous command; if you delete something with <code>rm</code>, you will not get it back! It is possible to delete everything in your home directory (all directories and subdirectories) with <code>rm</code>, that is why it is such a dangerous command.</p>
+<p>Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the <code>rm</code> command. Are you scared yet? You should be. Luckily there is a way of making <code>rm</code> a little bit safer. We can use it with the <code>-i</code> command-line option which will ask for confirmation before deleting anything (remember to use tab-completion):</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ cd Temp
+ubuntu@:~/Learning_unix/Temp$ ls
+earth.txt  heaven.txt  rags  Temp2
+ubuntu@:~/Learning_unix/Temp$ rm -i earth.txt heaven.txt rags
+rm: remove regular empty file â€˜earth.txtâ€™? y
+rm: remove regular empty file â€˜heaven.txtâ€™? y
+rm: remove regular empty file â€˜ragsâ€™? y
+ubuntu@:~/Learning_unix/Temp$ ls
+Temp2
+</code></pre>
+<p>We could have simplified this step by using a wild-card (e.g. <code>rm -i *.txt</code>) or we could have made things more complex by removing each file with a separate <code>rm</code> command. Let&#39;s finish cleaning up:</p>
+<pre><code class="lang-bash">rmdir Temp2/Temp3
+rmdir Temp2
+cd ..
+rmdir Temp
+</code></pre>
+
+        <div class="navlinks">
+          <a class="nextp button" href="19_copying_files.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="17_moving_directories.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

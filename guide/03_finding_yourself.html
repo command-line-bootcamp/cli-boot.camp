@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="03-finding-out-where-you-are">03: Finding out where you are</h2>
+<p>There may be many hundreds of directories on any Unix machine, so how do you know which one you are in? The command <a href="http://en.wikipedia.org/wiki/Pwd">pwd</a> will Print the <a href="http://en.wikipedia.org/wiki/Working_directory">Working Directory</a> and that&#39;s pretty much all this command does:</p>
+<pre><code class="lang-bash">ubuntu@:~$ pwd
+/home/ubuntu
+</code></pre>
+<p>When you log in to a Unix computer, you are typically placed into your <em>home</em> directory. In this example, after we log in, we are placed in a directory called &#39;ubuntu&#39; which itself is a <em>subdirectory</em> of another directory called &#39;home&#39;. Conversely, &#39;users&#39; is the <em>parent</em> directory of &#39;clmuser&#39;. The first forward slash that appears in a list of directory names always refers to the top level directory of the file system (known as the <a href="http://en.wikipedia.org/wiki/Root_directory">root directory</a>). The remaining forward slash (between &#39;home&#39; and &#39;ubuntu&#39;) delimits the various parts of the directory hierarchy. If you ever get &#39;lost&#39; in Unix, remember the <code>pwd</code> command.</p>
+<p>As you learn Unix you will frequently type commands that don&#39;t seem to work. Most of the time this will be because you are in the wrong directory, so it&#39;s a really good habit to get used to running the <code>pwd</code> command a lot.</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="04_making_directories.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="02_the_tree.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

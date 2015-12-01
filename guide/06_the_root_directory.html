@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="06-the-root-directory">06: The root directory</h2>
+<p>Let&#39;s change directory to the root directory, and then into our home directory</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$ cd /
+ubuntu@:/$ cd home
+ubuntu@:/home$ cd ubuntu
+ubuntu@:~$
+</code></pre>
+<p>In this case, we may as well have just changed directory in one go:</p>
+<pre><code class="lang-bash">cd /home/ubuntu/
+</code></pre>
+<p>The leading <code>/</code> is incredibly important. The following two commands are very different:</p>
+<pre><code class="lang-bash">cd /home/ubuntu/
+cd home/ubuntu/
+</code></pre>
+<p>The first command says go the <code>unbuntu</code> directory that is beneath the <code>home</code> directory that is at the top level (the root) of the file system. There can only be one <code>/home/ubuntu</code> directory on any Unix system.</p>
+<p>The second command says go to the <code>unbuntu</code> directory that is beneath the <code>home</code> directory that is located wherever I am right now. There can potentially be many <code>home/ubuntu</code> directories on a Unix system (though this is unlikely).</p>
+<p>Learn and understand the difference between these two commands.</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="07_going_up.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="05_moving_around.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>

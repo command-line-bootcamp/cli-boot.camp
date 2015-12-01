@@ -1,0 +1,248 @@
+@import "normalize.min.css";
+@import "bootstrap.min.css";
+@import "railscasts.css";
+
+/* Colors */
+/* Containers */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f6;
+  font-size: 18px;
+}
+h1,
+h2,
+h3 {
+  color: #333;
+}
+h4, h5 {
+  color: #777;
+}
+h4 {
+  font-size: 2rem;
+}
+.mono {
+  font-family: monospace;
+}
+a {
+  transition: all 0.15s ease;
+  color: #35b44f;
+}
+a:hover {
+  color: #35b44f;
+  text-decoration: underline;
+}
+p {
+  padding: 10px 0px;
+}
+pre {
+  padding: .5em;
+  font-size: 16px;
+  background-color: #232323;
+  color: #e6e1dc;
+}
+.muted,
+.dark-text {
+  color: #959ba4;
+}
+.caption {
+  color: #959ba4;
+  font-size: 14px;
+}
+.navlinks {
+  padding: 20px 20px 100px 30px;
+}
+.toc {
+  padding: 40px 0px 0px 0px;
+}
+.button {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  background-color: #35b44f;
+  padding: 18px 14px;
+  border-radius: 5px;
+}
+.button.button-light {
+  background-color: white;
+}
+.button:hover {
+  background-color: #a9ce7f;
+  text-decoration: none !important;
+}
+/** SPLASH **/
+.rsaquo {
+  color: #35B44F;
+  margin-right: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+/** CONTENT **/
+.small-dat-title-icon {
+  height: 2.5rem;
+  padding-right: 8px;
+}
+.content {
+  padding: 0px 15px;
+}
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.button:hover {
+  background-color: #a9ce7f;
+}
+.buttons {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 99999;
+}
+.button {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #35b44f;
+  padding: 7px 14px;
+  border-radius: 5px;
+}
+.CodeMirror { font-size: 12px; height: 100% !important; }
+.CodeMirror-scroll { height: 100%; }
+.CodeMirror div.CodeMirror-selected { background: rgba(0,0,0,0.1); }
+.CodeMirror-focused div.CodeMirror-selected { background: rgba(0,0,255,0.1); }
+.CodeMirror .errorLine { background: rgba(255,0,0,0.25); }
+.container { }
+
+.nextp {
+  float: right;
+}
+
+.datLogo {
+  padding: 3px 5px 0 5px;
+  height: 28px;
+  display: block;
+  float: left;
+}
+
+.datTitle {
+  line-height: 34px;
+  display: block;
+  float: left;
+}
+
+.hidden {
+  display: none;
+}
+
+.topbar {
+  font-weight: 300;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: #fdfdfd;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.topbar ul { padding: 0; margin: 0; list-style: none; padding-right: 5px; }
+.topbar li { line-height: 34px; display: inline; }
+.topbar li a { padding: 0px 3px; }
+
+.panels {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.editor {
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  right: 0;
+  bottom: 0;
+}
+
+.console {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  right: 0;
+  bottom: 50%;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tree {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  right: 45%;
+  bottom: 0;
+  padding: 0 0 0 4px;
+  overflow-y: scroll;
+}
+
+.guide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 55%;
+  bottom: 0;
+  border-bottom: 1px solid #ddd;
+  border-right: 5px solid #f4f5f6;
+}
+
+.console iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-width: 0;
+}
+
+.tall {
+  bottom: 0%;
+}
+
+/** footer **/
+.footer {
+  position: absolute;
+  bottom: -40px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  width: 100%;
+  background-color: #2a3749;
+  overflow: auto;
+  text-align: center;
+  color: #959ba4;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.octocat-green {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 17px;
+  height: 17px;
+  background-image: url('../img/octocat-green.png');
+}
+
+/* overrides */
+
+.tree-view .entry.selected:before {
+  background-color: #f7f7f7;
+}

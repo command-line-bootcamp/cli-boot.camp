@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="17-moving-directories">17: Moving directories</h2>
+<p>It is important to understand that as long as you have specified a &#39;source&#39; and a &#39;target&#39; location when you are moving a file, then it doesn&#39;t matter what your <em>current</em> directory is. You can move or copy things within the same directory or between different directories regardless of whether you are in any of those directories. Moving directories is just like moving files:</p>
+<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
+ubuntu@:~/Learning_unix$ mkdir Temp2
+ubuntu@:~/Learning_unix$ mv Temp2 Temp
+ubuntu@:~/Learning_unix$ ls Temp/
+earth.txt  heaven.txt  rags  Temp2
+</code></pre>
+<p>This step moves the Temp2 directory inside the Temp directory. Try creating a &#39;Temp3&#39; directory inside &#39;Learning_unix&#39; and then <code>cd</code> to <code>/tmp</code>. Can you move <code>Temp3</code> inside <code>Temp</code> without changing directory?</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="18_removing_files.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="16_moving_files.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+</body>
+</html>
