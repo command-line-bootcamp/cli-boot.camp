@@ -15,7 +15,7 @@ Unix is particularly suited to working with text files, even very large ones, an
 
 ## How to read this tutorial
 
-Command-line examples that you are meant to type into a terminal window will be shown indented in a constant-width font, e.g.
+Command-line examples that you are meant to type into a terminal window, and the results of those examples, will be shown in a black code block, e.g.
 
 ```bash
 ls -lrh
