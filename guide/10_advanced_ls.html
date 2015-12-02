@@ -14,12 +14,12 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="10-making-the-ls-command-more-useful">10: Making the <code>ls</code> command more useful</h2>
 <p>The <code>..</code> operator that we saw earlier can also be used with the <code>ls</code> command, e.g. you can list directories that are &#39;above&#39; you:</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ cd ~/Learning_unix/Outer_directory/
-learner@:~/Learning_unix/Outer_directory$ ls ../../
-command_line_course  Learning_unix  linux_bootcamp
+<pre><code class="lang-bash">learner@:~/learning_unix$ cd ~/learning_unix/outer/
+learner@:~/learning_unix/outer$ ls ../../
+command_line_course  learning_unix  linux_bootcamp
 </code></pre>
 <p>Time to learn another useful command-line option. If you add the letter &#39;l&#39; to the <code>ls</code> command it will give you a longer output compared to the default:</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ ls -l /home
+<pre><code class="lang-bash">learner@:~/learning_unix$ ls -l /home
 total 12
 drwxr-xr-x 8 galaxy galaxy 4096 Apr  2 22:47 galaxy
 drwxr-xr-x 3 root   root   4096 Mar 16 23:06 nate

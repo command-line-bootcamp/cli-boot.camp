@@ -19,14 +19,14 @@
 </blockquote>
 <p>Potentially, <code>rm</code> is a very dangerous command; if you delete something with <code>rm</code>, you will not get it back! It is possible to delete everything in your home directory (all directories and subdirectories) with <code>rm</code>, that is why it is such a dangerous command.</p>
 <p>Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the <code>rm</code> command. Are you scared yet? You should be. Luckily there is a way of making <code>rm</code> a little bit safer. We can use it with the <code>-i</code> command-line option which will ask for confirmation before deleting anything (remember to use tab-completion):</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ cd Temp
-learner@:~/Learning_unix/Temp$ ls
+<pre><code class="lang-bash">learner@:~/learning_unix$ cd Temp
+learner@:~/learning_unix/Temp$ ls
 earth.txt  heaven.txt  rags  Temp2
-learner@:~/Learning_unix/Temp$ rm -i earth.txt heaven.txt rags
+learner@:~/learning_unix/Temp$ rm -i earth.txt heaven.txt rags
 rm: remove regular empty file â€˜earth.txtâ€™? y
 rm: remove regular empty file â€˜heaven.txtâ€™? y
 rm: remove regular empty file â€˜ragsâ€™? y
-learner@:~/Learning_unix/Temp$ ls
+learner@:~/learning_unix/Temp$ ls
 Temp2
 </code></pre>
 <p>We could have simplified this step by using a wild-card (e.g. <code>rm -i *.txt</code>) or we could have made things more complex by removing each file with a separate <code>rm</code> command. Let&#39;s finish cleaning up:</p>

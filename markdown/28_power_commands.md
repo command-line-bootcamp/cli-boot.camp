@@ -40,7 +40,7 @@ cat file.txt | tr 'a-z' 'A-Z'
 + Change all occurences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
 
 ```bash
-cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
+cat file.txt | sed 's/Chr1/Chromosome 1/g' > file2.txt
 ```
 
 [sed]: http://en.wikipedia.org/wiki/Sed

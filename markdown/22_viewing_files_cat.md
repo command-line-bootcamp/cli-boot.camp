@@ -3,8 +3,8 @@
 Let's add another line to the file:
 
 ```bash
-learner@:~/Learning_unix$ echo "The primroses were over." >> opening_lines.txt
-learner@:~/Learning_unix$ cat opening_lines.txt
+learner@:learning_unix$ echo "The primroses were over." >> opening_lines.txt
+learner@:learning_unix$ cat opening_lines.txt
 Call me Ishmael.
 The primroses were over.
 ```

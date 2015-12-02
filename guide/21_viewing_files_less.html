@@ -14,12 +14,12 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="21-viewing-files-with-less">21: Viewing files with less</h2>
 <p>So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The <a href="http://en.wikipedia.org/wiki/Less_(Unix)">less</a> command lets you view (but not edit) text files. We will use the <a href="http://en.wikipedia.org/wiki/Echo_(command)">echo</a> command to put some text in a file and then view it:</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ echo &quot;Call me Ishmael.&quot;
+<pre><code class="lang-bash">learner@:~/learning_unix$ echo &quot;Call me Ishmael.&quot;
 Call me Ishmael.
-learner@:~/Learning_unix$ echo &quot;Call me Ishmael.&quot; &gt; opening_lines.txt
-learner@:~/Learning_unix$ ls
+learner@:~/learning_unix$ echo &quot;Call me Ishmael.&quot; &gt; opening_lines.txt
+learner@:~/learning_unix$ ls
 opening_lines.txt
-learner@:~/Learning_unix$ less opening_lines.txt
+learner@:~/learning_unix$ less opening_lines.txt
 </code></pre>
 <p>On its own, <code>echo</code> isn&#39;t a very exciting Unix command. It just echoes text back to the screen. But we can redirect that text into an output file by using the <code>&gt;</code> symbol. This allows for something called file <a href="http://en.wikipedia.org/wiki/Redirection_(Unix)">redirection</a>.</p>
 <blockquote>

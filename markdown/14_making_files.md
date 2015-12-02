@@ -3,10 +3,10 @@
 The following sections will deal with Unix commands that help us to work with files, i.e. copy files to/from places, move files, rename files, remove files, and most importantly, look at files. First, we need to have some files to play with. The Unix command [touch][] will let us create a new, empty file. The touch command does other things too, but for now we just want a couple of files to work with.
 
 ```bash
-learner@:~$ cd Learning_unix/
-learner@:~/Learning_unix$ touch heaven.txt
-learner@:~/Learning_unix$ touch earth.txt
-learner@:~/Learning_unix$ ls
+learner@:~$ cd learning_unix/
+learner@:learning_unix$ touch heaven.txt
+learner@:learning_unix$ touch earth.txt
+learner@:learning_unix$ ls
 earth.txt  heaven.txt
 ```
 

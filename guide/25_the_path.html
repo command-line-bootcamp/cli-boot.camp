@@ -14,11 +14,11 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="26-the-path-environment-variable">26: The $PATH environment variable</h2>
 <p>One other use of the <code>echo</code> command is for displaying the contents of something known as <em>environment variables</em>. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ echo $USER
+<pre><code class="lang-bash">learner@:~/learning_unix$ echo $USER
 ubuntu
-learner@:~/Learning_unix$ echo $HOME
+learner@:~/learning_unix$ echo $HOME
 /home/ubuntu
-learner@:~/Learning_unix$ echo $PATH
+learner@:~/learning_unix$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 </code></pre>
 <p>The last one shows the content of the <code>$PATH</code> environment variable, which displays a colon separated list of directories that are expected to contain programs that you can run. This includes all of the Unix commands that you have seen so far. These are files that live in directories which are run like programs (e.g. <code>ls</code> is just a special type of file in the <code>/bin</code> directory).</p>

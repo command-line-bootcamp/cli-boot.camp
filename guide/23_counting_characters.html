@@ -13,17 +13,17 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="24-counting-characters-words-and-lines-in-a-file">24: Counting characters, words and lines in a file</h2>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ ls
+<pre><code class="lang-bash">learner@:~/learning_unix$ ls
 opening_lines.txt
 
-learner@:~/Learning_unix$ ls -l
+learner@:~/learning_unix$ ls -l
 total 4
 -rw-rw-r-- 1 ubuntu ubuntu 42 Jun 15 04:13 opening_lines.txt
 
-learner@:~/Learning_unix$ wc opening_lines.txt
+learner@:~/learning_unix$ wc opening_lines.txt
  2  7 42 opening_lines.txt
 
-learner@:~/Learning_unix$ wc -l opening_lines.txt
+learner@:~/learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
 </code></pre>
 <p>The <code>ls -l</code> option shows us a long listing, which includes the size of the file in bytes (in this case &#39;42&#39;). Another way of finding this out is by using Unix&#39;s <a href="https://en.wikipedia.org/wiki/Wc_(Unix)">wc</a> command (word count). By default this tells you many lines, words, and characters are in a specified file (or files), but you can use command-line options to give you just one of those statistics (in this case we count lines with <code>wc -l</code>).</p>

@@ -14,10 +14,10 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="27-combining-unix-commands-with-pipes">27: Combining Unix commands with pipes</h2>
 <p>One of the most poweful features of Unix is that you can send the output from one command or program to any other command (as long as the second commmand accepts input of some sort). We do this by using what is known as a <a href="http://en.wikipedia.org/wiki/Pipe_(Unix)">pipe</a>. This is implemented using the &#39;|&#39; character (which is a character which always seems to be on different keys depending on the keyboard that you are using). Think of the pipe as simply connecting two Unix programs. Here&#39;s an example which introduces some new Unix commands:</p>
-<pre><code class="lang-bash">learner@:~/Learning_unix$ grep was opening_lines.txt | wc -c
+<pre><code class="lang-bash">learner@:~/learning_unix$ grep was opening_lines.txt | wc -c
 316
 
-learner@:~/Learning_unix$
+learner@:~/learning_unix$
 grep was opening_lines.txt | sort | head -n 3 | wc -c
 130
 </code></pre>

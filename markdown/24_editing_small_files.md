@@ -6,8 +6,6 @@ Nano is a lightweight editor installed on most Unix systems. There are many more
 nano opening_lines.txt
 ```
 
-You should see the following appear in your terminal:
-
-![](http://korflab.ucdavis.edu/Unix_and_Perl/nano2.png)
+You simply type the text you want to include in the file.
 
 The bottom of the nano window shows you a list of simple commands which are all accessible by typing 'Control' plus a letter. E.g. Control + X exits the program.
