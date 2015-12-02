@@ -15,11 +15,13 @@
         <p>This is the <strong>command-line bootcamp</strong>, a tutorial that teaches you how to work at the command-line. You'll learn all the basic skills needed to start being productive in the UNIX terminal.</p>
         <h4>Table of Contents</h4>
         <div class="jumbotron-horizontal-rule"></div>
+	<div class="toc">
         <ul class="toc-list">
           {{#index}}
             <li><a href="{{ href }}">{{ name }}</a></li>
           {{/index}}
         </ul>
+        </div>
         <p>If you look to your right, you'll see there is a terminal that is connected to a <strong>docker container</strong> -- that is a computer, in the cloud but accessible right here in your browser!</p>
         <p>Below the terminal, there's a filebrowser and an editor. These are connected to the same machine. Every time you type in the editor, the bootcamp automatically saves the file. Groovy.</p>
       <p><strong>Be aware: When you leave or close this webpage your server will be shut down.</strong></p>
