@@ -19,7 +19,6 @@
       "build",
       "render"
     ],
-    "cname": "rik.smith-unna.com",
     "noprompt": "true"
   },
   "dependencies": {
