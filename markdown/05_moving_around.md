@@ -4,7 +4,7 @@ We are in the home directory on the computer but we want to to work in the new `
 
 ```bash
 cd Learning_unix
-ubuntu@:~/Learning_unix$
+learner@:~/Learning_unix$
 ```
 
 Notice that on this system the command prompt has expanded to include our current directory. This doesn't happen by default on all Unix systems, but you should know that you can configure what information appears as part of the command prompt.
@@ -12,13 +12,13 @@ Notice that on this system the command prompt has expanded to include our curren
 Let's make two new subdirectories and navigate into them:
 
 ```bash
-ubuntu@:~/Learning_unix$ mkdir Outer_directory
-ubuntu@:~/Learning_unix$ cd Outer_directory
-ubuntu@:~/Learning_unix/Outer_directory$
+learner@:~/Learning_unix$ mkdir Outer_directory
+learner@:~/Learning_unix$ cd Outer_directory
+learner@:~/Learning_unix/Outer_directory$
 
-ubuntu@:~/Learning_unix/Outer_directory$ mkdir Inner_directory
-ubuntu@:~/Learning_unix/Outer_directory$ cd Inner_directory/
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$
+learner@:~/Learning_unix/Outer_directory$ mkdir Inner_directory
+learner@:~/Learning_unix/Outer_directory$ cd Inner_directory/
+learner@:~/Learning_unix/Outer_directory/Inner_directory$
 ```
 
 Now our command prompt is getting quite long, but it reveals that we are three levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the `mkdir` command in way to do this all in one step.

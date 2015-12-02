@@ -14,15 +14,15 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="16-renaming-files">16: Renaming files</h2>
 <p>In the earlier example, the destination for the <code>mv</code> command was a directory name (Temp). So we moved a file from its source location to a target location, but note that the target could have also been a (different) file name, rather than a directory. E.g. let&#39;s make a new file and move it whilst renaming it at the same time:</p>
-<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ touch rags
-ubuntu@:~/Learning_unix$ ls
+<pre><code class="lang-bash">learner@:~/Learning_unix$ touch rags
+learner@:~/Learning_unix$ ls
 rags  Temp
-ubuntu@:~/Learning_unix$ mv rags Temp/riches
-ubuntu@:~/Learning_unix$ ls Temp/
+learner@:~/Learning_unix$ mv rags Temp/riches
+learner@:~/Learning_unix$ ls Temp/
 earth.txt  heaven.txt  riches
 </code></pre>
 <p>In this example we create a new file (&#39;rags&#39;) and move it to a new location and in the process change the name (to &#39;riches&#39;). So <code>mv</code> can rename a file as well as move it. The logical extension of this is using <code>mv</code> to rename a file without moving it (you have to use <code>mv</code> to do this as Unix does not have a separate &#39;rename&#39; command):</p>
-<pre><code class="lang-bash">ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
+<pre><code class="lang-bash">learner@:~/Learning_unix$ mv Temp/riches Temp/rags
 </code></pre>
 
         <div class="navlinks">

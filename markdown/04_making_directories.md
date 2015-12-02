@@ -3,8 +3,8 @@
 If we want to make a new directory (e.g. to store some work related data), we can use the [mkdir][] command:
 
 ```bash
-ubuntu@:~$ mkdir Learning_unix
-ubuntu@:~$ ls
+learner@:~$ mkdir Learning_unix
+learner@:~$ ls
 command_line_course  Learning_unix  linux_bootcamp
 ```
 

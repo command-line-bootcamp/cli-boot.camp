@@ -9,14 +9,14 @@ Potentially, `rm` is a very dangerous command; if you delete something with `rm`
 Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the `rm` command. Are you scared yet? You should be. Luckily there is a way of making `rm` a little bit safer. We can use it with the `-i` command-line option which will ask for confirmation before deleting anything (remember to use tab-completion):
 
 ```bash
-ubuntu@:~/Learning_unix$ cd Temp
-ubuntu@:~/Learning_unix/Temp$ ls
+learner@:~/Learning_unix$ cd Temp
+learner@:~/Learning_unix/Temp$ ls
 earth.txt  heaven.txt  rags  Temp2
-ubuntu@:~/Learning_unix/Temp$ rm -i earth.txt heaven.txt rags
+learner@:~/Learning_unix/Temp$ rm -i earth.txt heaven.txt rags
 rm: remove regular empty file â€˜earth.txtâ€™? y
 rm: remove regular empty file â€˜heaven.txtâ€™? y
 rm: remove regular empty file â€˜ragsâ€™? y
-ubuntu@:~/Learning_unix/Temp$ ls
+learner@:~/Learning_unix/Temp$ ls
 Temp2
 ```
 

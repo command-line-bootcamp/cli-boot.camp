@@ -3,15 +3,15 @@
 The `..` operator that we saw earlier can also be used with the `ls` command, e.g. you can list directories that are 'above' you:
 
 ```bash
-ubuntu@:~/Learning_unix$ cd ~/Learning_unix/Outer_directory/
-ubuntu@:~/Learning_unix/Outer_directory$ ls ../../
+learner@:~/Learning_unix$ cd ~/Learning_unix/Outer_directory/
+learner@:~/Learning_unix/Outer_directory$ ls ../../
 command_line_course  Learning_unix  linux_bootcamp
 ```
 
 Time to learn another useful command-line option. If you add the letter 'l' to the `ls` command it will give you a longer output compared to the default:
 
 ```bash
-ubuntu@:~/Learning_unix$ ls -l /home
+learner@:~/Learning_unix$ ls -l /home
 total 12
 drwxr-xr-x 8 galaxy galaxy 4096 Apr  2 22:47 galaxy
 drwxr-xr-x 3 root   root   4096 Mar 16 23:06 nate

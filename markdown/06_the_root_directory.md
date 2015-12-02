@@ -3,10 +3,10 @@
 Let's change directory to the root directory, and then into our home directory
 
 ```bash
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$ cd /
-ubuntu@:/$ cd home
-ubuntu@:/home$ cd ubuntu
-ubuntu@:~$
+learner@:~/Learning_unix/Outer_directory/Inner_directory$ cd /
+learner@:/$ cd home
+learner@:/home$ cd ubuntu
+learner@:~$
 ```
 
 In this case, we may as well have just changed directory in one go:
