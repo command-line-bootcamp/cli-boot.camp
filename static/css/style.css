@@ -55,6 +55,12 @@ pre {
 }
 .toc {
   padding: 40px 0px 0px 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
 }
 .button {
   display: inline-block;
