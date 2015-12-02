@@ -14,22 +14,22 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="01-your-first-unix-command">01. Your first Unix command</h2>
 <p>It&#39;s important to note that you will always be <em>inside</em> a single directory when using the terminal. The default behavior is that when you open a new terminal you start in your own <em>home</em> directory (containing files and directories that only you can modify). To see what files and directories are in our home directory, we need to use the <a href="http://en.wikipedia.org/wiki/Ls">ls</a> command. This command lists the contents of a directory. If we run the <code>ls</code> command we should see something like:</p>
-<pre><code class="lang-bash">ubuntu@:~$ ls
+<pre><code class="lang-bash">learner@:~$ ls
 command_line_course  linux_bootcamp
-ubuntu@:~$
+learner@:~$
 </code></pre>
 <p>There are four things that you should note here:</p>
 <ol>
 <li>You will probably see different output to what is shown here, it depends on your computer setup. Don&#39;t worry about that for now.</li>
-<li>The <code>ubuntu@:~$</code> text that you see is the Unix <a href="http://en.wikipedia.org/wiki/Command_line_interface">command prompt</a>. In this case, it contains a user name (&#39;ubuntu&#39;) and the name of the current directory (&#39;~&#39;, more on that later). Note that the command prompt might not look the same on different Unix systems. In this case, the <code>$</code> sign marks the end of the prompt.</li>
+<li>The <code>learner@:~$</code> text that you see is the Unix <a href="http://en.wikipedia.org/wiki/Command_line_interface">command prompt</a>. In this case, it contains a user name (&#39;ubuntu&#39;) and the name of the current directory (&#39;~&#39;, more on that later). Note that the command prompt might not look the same on different Unix systems. In this case, the <code>$</code> sign marks the end of the prompt.</li>
 <li>The output of the <code>ls</code> command lists two things. In this case, they are both directories, but they could also be files. We&#39;ll learn how to tell them apart later on. These directories were created as part of a specific course that used this bootcamp material. You will therefore probably see something very different on your own computer.</li>
 <li>After the <code>ls</code> command finishes it produces a new command prompt, ready for you to type your next command.</li>
 </ol>
 <p>The <code>ls</code> command is used to list the contents of <em>any</em> directory, not necessarily the one that you are currently in. Try the following:</p>
-<pre><code class="lang-bash">ubuntu@:~$ ls /data
+<pre><code class="lang-bash">learner@:~$ ls /data
 bioinfo.course.data  command_line_course  galaxy  lost+found  refs
 
-ubuntu@:~$ ls /etc/perl
+learner@:~$ ls /etc/perl
 CPAN  Net  XML
 </code></pre>
 

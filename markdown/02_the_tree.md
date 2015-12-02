@@ -3,7 +3,7 @@
 Looking at directories from within a Unix terminal can often seem confusing. But bear in mind that these directories are exactly the same type of folders that you can see if you use any graphical file browser. From the *root* level (`/`) there are usually a dozen or so directories. You can treat the root directory like any other, e.g. you can list its contents:
 
 ```bash
-ubuntu@:~$ ls /
+learner@:~$ ls /
 bin   dev   initrd.img      lib64       mnt   root  software  tmp  vmlinuz
 boot  etc   initrd.img.old  lost+found  opt   run   srv       usr  vmlinuz.old
 data  home  lib             media       proc  sbin  sys       var

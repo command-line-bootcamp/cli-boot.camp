@@ -3,11 +3,11 @@
 One other use of the `echo` command is for displaying the contents of something known as *environment variables*. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo $USER
+learner@:~/Learning_unix$ echo $USER
 ubuntu
-ubuntu@:~/Learning_unix$ echo $HOME
+learner@:~/Learning_unix$ echo $HOME
 /home/ubuntu
-ubuntu@:~/Learning_unix$ echo $PATH
+learner@:~/Learning_unix$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 ```
 

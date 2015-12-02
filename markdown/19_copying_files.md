@@ -3,20 +3,20 @@
 Copying files with the [cp][] (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let's create a new file and make a copy of it:
 
 ```bash
-ubuntu@:~/Learning_unix$ touch file1
-ubuntu@:~/Learning_unix$ cp file1 file2
-ubuntu@:~/Learning_unix$ ls
+learner@:~/Learning_unix$ touch file1
+learner@:~/Learning_unix$ cp file1 file2
+learner@:~/Learning_unix$ ls
 file1  file2
 ```
 
 What if we wanted to copy files from a different directory to our current directory? Let's put a file in our home directory (specified by `~` remember) and copy it to the current directory (`Learning_unix`):
 
 ```bash
-ubuntu@:~/Learning_unix$ touch ~/file3
-ubuntu@:~/Learning_unix$ ls ~
+learner@:~/Learning_unix$ touch ~/file3
+learner@:~/Learning_unix$ ls ~
 command_line_course  file3  Learning_unix  linux_bootcamp
-ubuntu@:~/Learning_unix$ cp ~/file3 .
-ubuntu@:~/Learning_unix$ ls
+learner@:~/Learning_unix$ cp ~/file3 .
+learner@:~/Learning_unix$ ls
 file1  file2  file3
 ```
 

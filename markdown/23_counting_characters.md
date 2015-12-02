@@ -1,17 +1,17 @@
 ## 24: Counting characters, words and lines in a file
 
 ```bash
-ubuntu@:~/Learning_unix$ ls
+learner@:~/Learning_unix$ ls
 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ ls -l
+learner@:~/Learning_unix$ ls -l
 total 4
 -rw-rw-r-- 1 ubuntu ubuntu 42 Jun 15 04:13 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc opening_lines.txt
+learner@:~/Learning_unix$ wc opening_lines.txt
  2  7 42 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc -l opening_lines.txt
+learner@:~/Learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
 ```
 

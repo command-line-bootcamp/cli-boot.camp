@@ -3,12 +3,12 @@
 So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The [less][less command] command lets you view (but not edit) text files. We will use the [echo][echo command] command to put some text in a file and then view it:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael."
+learner@:~/Learning_unix$ echo "Call me Ishmael."
 Call me Ishmael.
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
-ubuntu@:~/Learning_unix$ ls
+learner@:~/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
+learner@:~/Learning_unix$ ls
 opening_lines.txt
-ubuntu@:~/Learning_unix$ less opening_lines.txt
+learner@:~/Learning_unix$ less opening_lines.txt
 ```
 
 On its own, `echo` isn't a very exciting Unix command. It just echoes text back to the screen. But we can redirect that text into an output file by using the `>` symbol. This allows for something called file [redirection][].
