@@ -37,3 +37,12 @@ cd command_line_bootcamp
 docker build -t "command_line_bootcamp" .
 docker-browser-server command_line_bootcamp -p 8080
 ```
+
+
+### cleaning up long-running containers
+
+Sometimes people leave their browser windows open for a really long time. If you don't want to fund the docker container running for that time, you can clean up long-running containers:
+
+```bash
+docker stop $(docker ps | grep hours | cut -d ' ' -f1 | paste - - - - )
+```
