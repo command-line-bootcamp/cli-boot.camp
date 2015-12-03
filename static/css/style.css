@@ -255,4 +255,4 @@ html, body {
   background-color: #f7f7f7;
 }
 
-li[data-id^=".0.0.$/="] { display: none; };
+li[data-reactid^=".0.0.$/="] { display: none; };
