@@ -54,7 +54,9 @@ pre {
   padding: 20px 20px 100px 30px;
 }
 .toc {
-  padding: 40px 0px 0px 0px;
+
+  /* top | right | bottom | left */
+  padding: 40px 0px;
   -moz-column-count: 2;
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
