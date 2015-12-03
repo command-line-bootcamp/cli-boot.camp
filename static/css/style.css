@@ -254,3 +254,5 @@ html, body {
 .tree-view .entry.selected:before {
   background-color: #f7f7f7;
 }
+
+li[data-id^=".0.0.$/="] { display: none; };
