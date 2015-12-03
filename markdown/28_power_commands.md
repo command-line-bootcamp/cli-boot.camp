@@ -32,7 +32,7 @@ grep -c '[bc]at' file.txt
 + Turn lower-case text into upper-case (using [tr][] command to 'transliterate'):
 
 ```bash
-cat file.txt | tr 'a-z' 'A-Z'
+tr 'a-z' 'A-Z' < file.txt
 ```
 
 [tr]: http://en.wikipedia.org/wiki/Tr_(Unix)
@@ -40,7 +40,7 @@ cat file.txt | tr 'a-z' 'A-Z'
 + Change all occurences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
 
 ```bash
-cat file.txt | sed 's/Chr1/Chromosome 1/g' > file2.txt
+sed 's/Chr1/Chromosome 1/g' file.txt > file2.txt
 ```
 
 [sed]: http://en.wikipedia.org/wiki/Sed
