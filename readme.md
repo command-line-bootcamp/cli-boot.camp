@@ -2,8 +2,35 @@
 
 Learn the unix command-line by using it in your browser.
 
+### build and deploy the frontend
 
-### how to run the docker server
+You'll need node.js
+
+```bash
+# install and set up nvm and node
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+source ~/.bashrc
+
+# some dependencies don't work with node 1+, so stick with 0.12
+nvm install 0.12
+nvm use 0.12
+```
+
+Once you've got node installed, grab this repo and let node install the dependencies:
+
+```bash
+git clone https://github.com/Blahah/command_line_bootcamp.git
+cd command_line_bootcamp
+npm install
+```
+
+Make your changes (if any) and then deploy:
+
+```bash
+npm run deploy
+```
+
+### setup and run the docker server backend
 
 Instructions for running on digitalocean:
 
@@ -21,7 +48,7 @@ apt-get install -y build-essential g++
 
 # install and set up nvm and node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-source ~/.bash_profile
+source ~/.bashrc
 
 # some dependencies don't work with node 1+, so stick with 0.12
 nvm install 0.12
@@ -37,7 +64,6 @@ cd command_line_bootcamp
 docker build -t "command_line_bootcamp" .
 docker-browser-server command_line_bootcamp -p 8080
 ```
-
 
 ### cleaning up long-running containers
 
