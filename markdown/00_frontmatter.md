@@ -30,14 +30,3 @@ From time to time this documentation will contain [web links][] to pages that wi
 >***This is an important point!***
 
 [web links]: http://en.wikipedia.org/wiki/Hyperlink
-
-
-## License
-
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 International License</a><.
-
-The bootcamp tutorial text was adapted from [the excellent original](http://korflab.ucdavis.edu/bootcamp.html) by [Keith Bradnam](http://www.keithbradnam.com/). The Infrastructure, including [adventure-time](https://github.com/maxogden/adventure-time) and [docker-browser-server](https://github.com/mafintosh/docker-browser-server), was built by [@maxogden](github.com/maxogden) and [@mafintosh](github.com/maxogden). The setup of this app was based on the [get-dat adventure](https://github.com/maxogden/get-dat). This adventure was made by [Richard Smith-Unna](http://rik.smith-unna.com/about).
-
-Please post feedback at https://github.com/blahah/command_line_bootcamp.
