@@ -45,7 +45,7 @@
       {{/if}}
     </section>
   </div>
-  <script src="http://minifiedjs.com/download/minified-web.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
   <script>
     function neaten(str) {
@@ -57,7 +57,7 @@
     }
     var $=MINI.$;
     $('.toc-list li a').each(function(e, i) {
-      e.set('text', neaten(e.get('text')));
+      e.text(neaten(e.text()));
     });
   </script>
 </body>
