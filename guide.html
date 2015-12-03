@@ -45,6 +45,20 @@
       {{/if}}
     </section>
   </div>
+  <script src="http://minifiedjs.com/download/minified-web.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    var $=MINI.$;
+    $('.toc-list li a').each(function(e, i) {
+      e.set('text', neaten(e.get('text')));
+    });
+  </script>
 </body>
 </html>
