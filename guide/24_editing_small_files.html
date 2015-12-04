@@ -16,8 +16,7 @@
 <p>Nano is a lightweight editor installed on most Unix systems. There are many more powerful editors (such as &#39;emacs&#39; and &#39;vi&#39;), but these have steep learning curves. Nano is very simple. You can edit (or create) files by typing:</p>
 <pre><code class="lang-bash">nano opening_lines.txt
 </code></pre>
-<p>You should see the following appear in your terminal:</p>
-<p><img src="http://korflab.ucdavis.edu/Unix_and_Perl/nano2.png" alt=""></p>
+<p>You simply type the text you want to include in the file.</p>
 <p>The bottom of the nano window shows you a list of simple commands which are all accessible by typing &#39;Control&#39; plus a letter. E.g. Control + X exits the program.</p>
 
         <div class="navlinks">
@@ -26,6 +25,19 @@
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

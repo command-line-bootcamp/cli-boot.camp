@@ -18,10 +18,10 @@ opening_lines.txt
 
 learner@:~/learning_unix$ ls -l
 total 4
--rw-rw-r-- 1 ubuntu ubuntu 42 Jun 15 04:13 opening_lines.txt
+-rw-r--r-- 1 learner learner 0 Dec  2 09:09 opening_lines.txt
 
 learner@:~/learning_unix$ wc opening_lines.txt
- 2  7 42 opening_lines.txt
+2  7 42 opening_lines.txt
 
 learner@:~/learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
@@ -34,6 +34,19 @@ learner@:~/learning_unix$ wc -l opening_lines.txt
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

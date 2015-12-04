@@ -17,18 +17,22 @@
 <pre><code class="lang-bash">cd learning_unix
 learner@:~/learning_unix$
 </code></pre>
-<p>Notice that on this system the command prompt has expanded to include our current directory. This doesn&#39;t happen by default on all Unix systems, but you should know that you can configure what information appears as part of the command prompt.</p>
+<p>Notice that on this system the command prompt has expanded to include our current directory. This doesn&#39;t happen by default on all Unix systems, and you can configure what information appears as part of the command prompt (though we won&#39;t cover that here).</p>
 <p>Let&#39;s make two new subdirectories and navigate into them:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ mkdir outer
-learner@:~/learning_unix$ cd outer
-learner@:~/learning_unix/outer$
+<pre><code class="lang-bash">learner@:learning_unix$ mkdir outer
+learner@:learning_unix$ cd outer
+learner@:outer$
 
-learner@:~/learning_unix/outer$ mkdir inner
-learner@:~/learning_unix/outer$ cd inner/
-learner@:~/learning_unix/outer/inner$
+learner@:outer$ mkdir inner
+learner@:outer$ cd inner/
+learner@:inner$
 </code></pre>
-<p>Now our command prompt is getting quite long, but it reveals that we are three levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the <code>mkdir</code> command in way to do this all in one step.</p>
-<p>Like most Unix commands, <code>mkdir</code> supports <em>command-line options</em> which let you alter its behavior and functionality. Command-like options are â€”Â as the name suggests â€”Â optional arguments that are placed after the command name. They often take the form of single letters (following a dash). If we had used the <code>-p</code> option of the <code>mkdir</code> command we could have done this in one step. E.g.</p>
+<p>Remember that you can always find out where you are using <code>pwd</code>:</p>
+<pre><code class="lang-bash">learner@:inner$ pwd
+/home/learner/learning_unix/outer/inner
+</code></pre>
+<p>We created the two directories in separate steps, but it is possible to use the <code>mkdir</code> command in way to do this all in one step.</p>
+<p>Like most Unix commands, <code>mkdir</code> supports <em>command-line options</em> which let you alter its behavior and functionality. Command-like options are - as the name suggests - optional arguments that are placed after the command name. They often take the form of single letters (following a dash). If we had used the <code>-p</code> option of the <code>mkdir</code> command we could have done this in one step. E.g.</p>
 <pre><code class="lang-bash">mkdir -p outer/inner
 </code></pre>
 <p><strong><em>Note the spaces either side the <code>-p</code>!</em></strong></p>
@@ -39,6 +43,19 @@ learner@:~/learning_unix/outer/inner$
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

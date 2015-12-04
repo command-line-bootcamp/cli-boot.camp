@@ -14,24 +14,22 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="10-making-the-ls-command-more-useful">10: Making the <code>ls</code> command more useful</h2>
 <p>The <code>..</code> operator that we saw earlier can also be used with the <code>ls</code> command, e.g. you can list directories that are &#39;above&#39; you:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ cd ~/learning_unix/outer/
-learner@:~/learning_unix/outer$ ls ../../
-command_line_course  learning_unix  linux_bootcamp
+<pre><code class="lang-bash">learner@:learning_unix$ cd ~/learning_unix/outer/
+learner@:outer$ ls ../../
+a_directory another_directory learning_unix
 </code></pre>
 <p>Time to learn another useful command-line option. If you add the letter &#39;l&#39; to the <code>ls</code> command it will give you a longer output compared to the default:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ ls -l /home
-total 12
-drwxr-xr-x 8 galaxy galaxy 4096 Apr  2 22:47 galaxy
-drwxr-xr-x 3 root   root   4096 Mar 16 23:06 nate
-drwxr-xr-x 9 ubuntu ubuntu 4096 Jun 15 02:07 ubuntu
+<pre><code class="lang-bash">learner@:learning_unix$ ls -l /home
+total 4
+drwxr-xr-x 6 learner learner 4096 Dec  2 08:31 learner
 </code></pre>
 <p>For each file or directory we now see more information (including file ownership and modification times). The &#39;d&#39; at the start of each line indicates that these are directories. There are many, many different options for the <code>ls</code> command. Try out the following (against any directory of your choice) to see how the output changes.</p>
-<pre><code class="lang-bash">ls -l 
+<pre><code class="lang-bash">ls -l
 ls -R
 ls -l -t -r
 ls -lh
 </code></pre>
-<p>Note that the last example combine multiple options but only use one dash. This is a very common way of specifying multiple command-line options. You may be wondering what some of these options are doing. It&#39;s time to learn about Unix documentation....</p>
+<p>Note that the last example combine multiple options but only use one dash. This is a very common way of specifying multiple command-line options. You may be wondering what some of these options are doing. It&#39;s time to learn about Unix documentation...</p>
 
         <div class="navlinks">
           <a class="nextp button" href="11_man_pages.html">OK, next! &raquo;</a>
@@ -39,6 +37,19 @@ ls -lh
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

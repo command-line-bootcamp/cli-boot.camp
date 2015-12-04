@@ -14,17 +14,17 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="19-copying-files">19: Copying files</h2>
 <p>Copying files with the <a href="http://en.wikipedia.org/wiki/Cp_(Unix)">cp</a> (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let&#39;s create a new file and make a copy of it:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ touch file1
-learner@:~/learning_unix$ cp file1 file2
-learner@:~/learning_unix$ ls
+<pre><code class="lang-bash">learner@:learning_unix$ touch file1
+learner@:learning_unix$ cp file1 file2
+learner@:learning_unix$ ls
 file1  file2
 </code></pre>
 <p>What if we wanted to copy files from a different directory to our current directory? Let&#39;s put a file in our home directory (specified by <code>~</code> remember) and copy it to the current directory (<code>learning_unix</code>):</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ touch ~/file3
-learner@:~/learning_unix$ ls ~
+<pre><code class="lang-bash">learner@:learning_unix$ touch ~/file3
+learner@:learning_unix$ ls ~
 command_line_course  file3  learning_unix  linux_bootcamp
-learner@:~/learning_unix$ cp ~/file3 .
-learner@:~/learning_unix$ ls
+learner@:learning_unix$ cp ~/file3 .
+learner@:learning_unix$ ls
 file1  file2  file3
 </code></pre>
 <p>This last step introduces another new concept. In Unix, the current directory can be represented by a <code>.</code> (dot) character. You will mostly use this only for copying files to the current directory that you are in. Compare the following:</p>
@@ -40,6 +40,19 @@ ls ./
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>
