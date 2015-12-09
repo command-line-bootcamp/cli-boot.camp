@@ -12,6 +12,8 @@ curl https://raw.githubusercontent.com/Blahah/command_line_bootcamp/master/testf
 less testfile.vcf
 ```
 
+`curl` will download any URL you provide it and print it to STDOUT. Since we want our testfile on the filesystem, we redirect the output of `curl` do the file "testfile.vcf"
+
 As you can see, the second column of this file is the position of a SNP in a chromosome. Let's extract only this information from the file:
 
 ```bash
@@ -36,4 +38,4 @@ The first 2 commands are simple enough, but let's take a closer look at that thi
 
 `paste - col2.txt >> newfile.vcf`. `paste` will place the contents of two files together, but unlike `cat`, which will do this sequentially by line number, `paste` will work with the files as columns, placing the contents of the first file on the "left" of the contents of the second file. The `-` means that instead of reading the contents of a file, `paste` will read from the `STDIN` (standard input)
 
-
+There you have it. A new file, with column 2 appended as column 12. (You can look at it using `less`)
