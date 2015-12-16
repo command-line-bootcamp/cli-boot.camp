@@ -3,7 +3,7 @@
 Nano is a lightweight editor installed on most Unix systems. There are many more powerful editors (such as 'emacs' and 'vi'), but these have steep learning curves. Nano is very simple. You can edit (or create) files by typing:
 
 ```bash
-nano opening_lines.txt
+learner@:learning_unix$ nano opening_lines.txt
 ```
 
 You simply type the text you want to include in the file.
