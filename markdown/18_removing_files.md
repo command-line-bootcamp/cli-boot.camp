@@ -24,10 +24,10 @@ temp2
 We could have simplified this step by using a wild-card (e.g. `rm -i *.txt`) or we could have made things more complex by removing each file with a separate `rm` command. Let's finish cleaning up:
 
 ```bash
-rmdir temp2/temp3
-rmdir temp2
-cd ..
-rmdir temp
+learner@:temp$ rmdir temp2/temp3/
+learner@:temp$ rmdir temp2/
+learner@:temp$ cd ..
+learner@:learning_unix$ rmdir temp
 ```
 
 [rm]: http://en.wikipedia.org/wiki/Rm_(Unix)
