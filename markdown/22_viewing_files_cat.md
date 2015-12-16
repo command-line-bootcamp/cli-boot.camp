@@ -15,4 +15,10 @@ Notice that we use `>>` and not just `>`. This operator will **append** to a fil
 learner@:learning_unix$ cat opening_lines.txt > file_copy.txt
 ```
 
+And again, let's clean up the redundant file:
+
+```bash
+learner@:learning_unix rm file_copy.txt
+```
+
 [cat command]: http://en.wikipedia.org/wiki/Cat_(Unix)
