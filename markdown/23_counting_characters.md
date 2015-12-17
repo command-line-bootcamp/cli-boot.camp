@@ -1,17 +1,17 @@
-## 24: Counting characters, words and lines in a file
+## 23: Counting characters, words and lines in a file
 
 ```bash
-learner@:~/learning_unix$ ls
+learner@:learning_unix$ ls
 opening_lines.txt
 
-learner@:~/learning_unix$ ls -l
+learner@:learning_unix$ ls -l
 total 4
 -rw-r--r-- 1 learner learner 0 Dec  2 09:09 opening_lines.txt
 
-learner@:~/learning_unix$ wc opening_lines.txt
+learner@:learning_unix$ wc opening_lines.txt
 2  7 42 opening_lines.txt
 
-learner@:~/learning_unix$ wc -l opening_lines.txt
+learner@:learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
 ```
 
