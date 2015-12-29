@@ -1,6 +1,6 @@
 ## 27: Working with columns
 
-Along your "command line adventures", you will encounter many files that are divided in columns (csv and tsv files are **very** common in bioinformatics).
+Along your "command line adventures", you will encounter many files that are divided in columns, such as "csv" or "tsv" files.
 
 Fortunately, unix has many tools to handle and manipulate this type of files.
 
@@ -8,34 +8,34 @@ First let's download ourselves a test file and look at it's contents:
 
 ```bash
 cd
-curl https://raw.githubusercontent.com/Blahah/command_line_bootcamp/master/testfiles/test.vcf > testfile.vcf
+curl https://raw.githubusercontent.com/Blahah/command_line_bootcamp/master/testfiles/grades.txt > grades.txt
 less testfile.vcf
 ```
 
-`curl` will download any URL you provide it and print it to STDOUT. Since we want our testfile on the filesystem, we redirect the output of `curl` do the file "testfile.vcf"
+`curl` will download the contents of any URL you provide it and print it to STDOUT. Since we want our test file on the filesystem, we redirect the output of `curl` to the file "grades.txt"
 
-As you can see, the second column of this file is the position of a SNP in a chromosome. Let's extract only this information from the file:
-
-```bash
-cut -s -f 2 testfile.vcf
-```
-
-Neat, hum? The "-f 2" argument tells `cut` to provides us the second column of the file and the "-s" argument tells it to skip any lines that don't have a second column.
-
-Now for the sake of the exercise (you won't probably ever do this in real work), let's append this column to the end of the file. We need to take several steps:
+As you can see, this file containing hypothetical grades for hypothetical characters. First of all, one character stands out - "Spock", as he aces every class. Let's extract his information:
 
 ```bash
-cut -s -f 2 testfile.vcf > col2.txt  # Place the column in a temporary file
-grep "##" testfile.vcf > newfile.vcf  # Place the header on a new file
-grep -v "##" testfile.vcf | paste - col2.txt >> newfile.vcf  # This is the tricky part
+cut -f 5 grades.txt
 ```
 
-Woha, what was that?
+This command provides us with all the rows for column "5" (-f 5), which contains the grades for "Spock" and prints it to STDOUT. Neat, hum?
 
-The first 2 commands are simple enough, but let's take a closer look at that third one:
+What else stands out here? "Luke" has a value of 150 where the maximum is 100. He's probably "forcing" that grade, and that's cheating. Speaking of cheaters, Malcom is a known cheater, and his scores of 50 on everything raise suspicions. Let's remove both these students from our file.
 
-`grep -v "##" testfile.vcf` will print every line in the file that does **not** contain a "##", which pretty much means that we are skipping the file header. We are then "piping" the output of this command into the next one:
+```bash
+cut -f -2,4-7,9 grades.txt > grades_no_cheaters.txt
+```
 
-`paste - col2.txt >> newfile.vcf`. `paste` will place the contents of two files together, but unlike `cat`, which will do this sequentially by line number, `paste` will work with the files as columns, placing the contents of the first file on the "left" of the contents of the second file. The `-` means that instead of reading the contents of a file, `paste` will read from the `STDIN` (standard input)
+Ok, there is a lot to sink in here. First, the syntax of what the "-f" argument takes: the "-" means "everything up to" when used as the first character, but also means "everything between" when used between two other values (it also can mean "everything after" if used as the last character). Note that we are separating values with ",". The `> grades_no_cheaters.txt` will redirect the output into a new file.
 
-There you have it. A new file, with column 2 appended as column 12. (You can look at it using `less`)
+Ok, so now let's add back the cheaters as the last columns of our grades file.
+
+```bash
+cut -f 3,8 grades.txt | paste grades_no_cheaters.txt - > sorted_grades.txt
+```
+
+Easy, wasn't it? We just cut back the names of the cheaters and then "piped" them to paste which placed the columns in the end of the grades file. The "-" here means "read from STDIN", and we could use another file instead, to merge the contents of both files.
+
+There you have it. Now all you have to do is read `sorted_grades.txt` and figure out what to do with the cheating students.
