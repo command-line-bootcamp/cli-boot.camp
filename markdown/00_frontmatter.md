@@ -23,21 +23,10 @@ ls -lrh
 
 Sometimes the accompanying text will include a reference to a Unix command. Any such text will also be in a constant-width, boxed font. E.g.
 
->Type the `pwd` command again.
+>Type the `pwd` command.
 
 From time to time this documentation will contain [web links][] to pages that will help you find out more about certain Unix commands. Usually, the _first_ mention of a command or function will be a hyperlink to Wikipedia. Important or critical points will be styled like so:
 
 >***This is an important point!***
 
 [web links]: http://en.wikipedia.org/wiki/Hyperlink
-
-
-## License
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a><.
-
-The bootcamp tutorial text was adapted from [the original](http://korflab.ucdavis.edu/bootcamp.html) by [Keith Bradnam](http://www.keithbradnam.com/). The Infrastructure, including [adventure-time](https://github.com/maxogden/adventure-time) and [docker-browser-server](https://github.com/mafintosh/docker-browser-server), was built by [@maxogden](github.com/maxogden) and [@mafintosh](github.com/maxogden). The setup of this app was based on the [get-dat adventure](https://github.com/maxogden/get-dat). This adventure was made by [Richard Smith-Unna](http://rik.smith-unna.com/about).
-
-Please post feedback at https://github.com/blahah/command_line_bootcamp.

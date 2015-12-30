@@ -1,5 +1,5 @@
 {
-  "name": "unix_for_biologists",
+  "name": "command_line_bootcamp",
   "version": "1.0.0",
   "description": "an adventure in learning the command-line",
   "main": "index.js",

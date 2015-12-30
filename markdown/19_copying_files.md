@@ -30,4 +30,10 @@ ls ./
 
 In this case, using the dot is somewhat pointless because `ls` will already list the contents of the current directory by default. Also note how the trailing slash is optional. You can use `rm` to remove the temporary files.
 
+Finally, let's clean up this directory. Note the use of the `*` wildcard, which allows us to delete all three files at once.
+
+```bash
+learner@:learning_unix$ rm file*
+```
+
 [cp]: http://en.wikipedia.org/wiki/Cp_(Unix)
