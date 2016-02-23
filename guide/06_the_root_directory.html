@@ -14,20 +14,20 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="06-the-root-directory">06: The root directory</h2>
 <p>Let&#39;s change directory to the root directory, and then into our home directory</p>
-<pre><code class="lang-bash">learner@:~/learning_unix/outer/inner$ cd /
+<pre><code class="lang-bash">learner@:inner$ cd /
 learner@:/$ cd home
-learner@:/home$ cd ubuntu
+learner@:home$ cd learner
 learner@:~$
 </code></pre>
 <p>In this case, we may as well have just changed directory in one go:</p>
-<pre><code class="lang-bash">cd /home/ubuntu/
+<pre><code class="lang-bash">cd /home/learner/
 </code></pre>
 <p>The leading <code>/</code> is incredibly important. The following two commands are very different:</p>
-<pre><code class="lang-bash">cd /home/ubuntu/
-cd home/ubuntu/
+<pre><code class="lang-bash">cd /home/learner/
+cd home/learner/
 </code></pre>
-<p>The first command says go the <code>unbuntu</code> directory that is beneath the <code>home</code> directory that is at the top level (the root) of the file system. There can only be one <code>/home/ubuntu</code> directory on any Unix system.</p>
-<p>The second command says go to the <code>unbuntu</code> directory that is beneath the <code>home</code> directory that is located wherever I am right now. There can potentially be many <code>home/ubuntu</code> directories on a Unix system (though this is unlikely).</p>
+<p>The first command says go the <code>learner</code> directory that is beneath the <code>home</code> directory that is at the top level (the root) of the file system. There can only be one <code>/home/learner</code> directory on any Unix system.</p>
+<p>The second command says go to the <code>learner</code> directory that is beneath the <code>home</code> directory that is located wherever I am right now. There can potentially be many <code>home/learner</code> directories on a Unix system (though this is unlikely).</p>
 <p>Learn and understand the difference between these two commands.</p>
 
         <div class="navlinks">
@@ -36,6 +36,19 @@ cd home/ubuntu/
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

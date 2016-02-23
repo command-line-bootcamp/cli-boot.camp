@@ -42,13 +42,26 @@
 <ul>
 <li>Change all occurences of &#39;Chr1&#39; to &#39;Chromosome 1&#39; and write changed output to a new file (using <a href="http://en.wikipedia.org/wiki/Sed">sed</a> command):</li>
 </ul>
-<pre><code class="lang-bash">cat file.txt | sed &#39;s/Chr1/Chromosome 1/&#39; &gt; file2.txt
+<pre><code class="lang-bash">cat file.txt | sed &#39;s/Chr1/Chromosome 1/g&#39; &gt; file2.txt
 </code></pre>
 
         <div class="navlinks">
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

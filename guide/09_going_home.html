@@ -13,7 +13,7 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="09-finding-your-way-back-home">09: Finding your way back home</h2>
-<p>Remember that the command prompt shows you the name of the directory that you are currently in, and that when you are in your home directory it shows you a tilde character (`~``) instead? This is because Unix uses the tilde character as a short-hand way of <a href="http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs">specifying a home directory</a>.</p>
+<p>Remember that the command prompt shows you the name of the directory that you are currently in, and that when you are in your home directory it shows you a tilde character (<code>~</code>) instead? This is because Unix uses the tilde character as a short-hand way of <a href="http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs">specifying a home directory</a>.</p>
 <p>See what happens when you try the following commands (use the <code>pwd</code> command after each one to confirm the results if necessary):</p>
 <pre><code class="lang-bash">cd /
 cd ~
@@ -31,6 +31,19 @@ learner@:/$ cd ~/learning_unix
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

@@ -13,27 +13,28 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="18-removing-files">18: Removing files</h2>
-<p>You&#39;ve seen how to remove a directory with the <code>rmdir</code> command, but <code>rmdir</code> won&#39;t remove directories if they contain any files. So how can we remove the files we have created (inside <code>Learning_Unix/Temp</code>)? In order to do this, we will have to use the <a href="http://en.wikipedia.org/wiki/Rm_(Unix)">rm</a> (remove) command.</p>
+<p>You&#39;ve seen how to remove a directory with the <code>rmdir</code> command, but <code>rmdir</code> won&#39;t remove directories if they contain any files. So how can we remove the files we have created (inside <code>learning_unix/temp</code>)? In order to do this, we will have to use the <a href="http://en.wikipedia.org/wiki/Rm_(Unix)">rm</a> (remove) command.</p>
 <blockquote>
-<p><strong><em>Please read the next section VERY carefully. Misuse of the <code>rm</code> command can lead to needless death &amp; destruction</em></strong> </p>
+<p><strong><em>Please read the next section VERY carefully. Misuse of the <code>rm</code> command can lead to needless death &amp; destruction</em></strong></p>
 </blockquote>
 <p>Potentially, <code>rm</code> is a very dangerous command; if you delete something with <code>rm</code>, you will not get it back! It is possible to delete everything in your home directory (all directories and subdirectories) with <code>rm</code>, that is why it is such a dangerous command.</p>
-<p>Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the <code>rm</code> command. Are you scared yet? You should be. Luckily there is a way of making <code>rm</code> a little bit safer. We can use it with the <code>-i</code> command-line option which will ask for confirmation before deleting anything (remember to use tab-completion):</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ cd Temp
-learner@:~/learning_unix/Temp$ ls
-earth.txt  heaven.txt  rags  Temp2
-learner@:~/learning_unix/Temp$ rm -i earth.txt heaven.txt rags
-rm: remove regular empty file â€˜earth.txtâ€™? y
-rm: remove regular empty file â€˜heaven.txtâ€™? y
-rm: remove regular empty file â€˜ragsâ€™? y
-learner@:~/learning_unix/Temp$ ls
-Temp2
+<p>Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the <code>rm</code> command. Are you scared yet? You should be. Luckily there is a way of making <code>rm</code> a little bit safer. We can use it with the <code>-i</code> command-line option which will ask for confirmation before deleting anything (remember to use tab-completion). Run the following commands,
+and type &quot;y&quot; (for yes) to indicate you truly intend to delete the files.</p>
+<pre><code class="lang-bash">learner@:learning_unix$ cd temp
+learner@:temp$ ls
+earth.txt  heaven.txt  rags  temp2
+learner@:temp$ rm -i earth.txt heaven.txt rags
+rm: remove regular empty file earth.txt? y
+rm: remove regular empty file heaven.txt? y
+rm: remove regular empty file rags? y
+learner@:temp$ ls
+temp2
 </code></pre>
 <p>We could have simplified this step by using a wild-card (e.g. <code>rm -i *.txt</code>) or we could have made things more complex by removing each file with a separate <code>rm</code> command. Let&#39;s finish cleaning up:</p>
-<pre><code class="lang-bash">rmdir Temp2/Temp3
-rmdir Temp2
-cd ..
-rmdir Temp
+<pre><code class="lang-bash">learner@:temp$ rmdir temp2/temp3/
+learner@:temp$ rmdir temp2/
+learner@:temp$ cd ..
+learner@:learning_unix$ rmdir temp
 </code></pre>
 
         <div class="navlinks">
@@ -42,6 +43,19 @@ rmdir Temp
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

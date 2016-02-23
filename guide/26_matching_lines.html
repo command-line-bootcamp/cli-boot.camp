@@ -13,7 +13,7 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="26-matching-lines-in-files-with-grep">26: Matching lines in files with grep</h2>
-<p>Use <code>nano</code> to add the following lines to <code>opening_lines.txt</code>:</p>
+<p>Use <code>nano</code> to add the following lines to <code>opening_lines.txt</code>, making sure to use the <code>WriteOut</code> command to save:</p>
 <pre><code>Now is the winter of our discontent.
 All children, except one, grow up.
 The Galactic Empire was dying.
@@ -33,7 +33,7 @@ Marley was dead, to begin with.
 <li>show lines that don&#39;t match a pattern (<code>-v</code>)</li>
 <li>Use wildcard characters and other patterns to allow for alternatives (<code>*</code>, <code>.</code>, and <code>[]</code>)</li>
 </ul>
-<pre><code class="lang-bash">grep was opening_lines.txt
+<pre><code class="lang-bash">learner@:learning_unix$ grep was opening_lines.txt
 The Galactic Empire was dying.
 It was a pleasure to burn.
 It was a bright, cold day in April, and the clocks were striking thirteen.
@@ -42,7 +42,7 @@ It was the day my grandmother exploded.
 When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow.
 Marley was dead, to begin with.
 
-grep -v was opening_lines.txt
+learner@:learning_unix$ grep -v was opening_lines.txt
 Call me Ishmael.
 The primroses were over.
 Now is the winter of our discontent.
@@ -50,14 +50,14 @@ All children, except one, grow up.
 In a hole in the ground there lived a hobbit.
 I am an invisible man.
 
-grep all opening_lines.txt
+learner@:learning_unix$ grep all opening_lines.txt
 Call me Ishmael.
 
-grep -i all opening_lines.txt
+learner@:learning_unix$ grep -i all opening_lines.txt
 Call me Ishmael.
 All children, except one, grow up.
 
-grep in opening_lines.txt
+learner@:learning_unix$ grep in opening_lines.txt
 Now is the winter of our discontent.
 The Galactic Empire was dying.
 In a hole in the ground there lived a hobbit.
@@ -65,22 +65,22 @@ It was a bright, cold day in April, and the clocks were striking thirteen.
 I am an invisible man.
 Marley was dead, to begin with.
 
-grep -w in opening_lines.txt
+learner@:learning_unix$ grep -w in opening_lines.txt
 In a hole in the ground there lived a hobbit.
 It was a bright, cold day in April, and the clocks were striking thirteen.
 
-grep -w o.. opening_lines.txt
+learner@:learning_unix$ grep -w o.. opening_lines.txt
 Now is the winter of our discontent.
 All children, except one, grow up.
 
-grep [aeiou]t opening_lines.txt
+learner@:learning_unix$ grep [aeiou]t opening_lines.txt
 In a hole in the ground there lived a hobbit.
 It was love at first sight.
 It was the day my grandmother exploded.
 When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow.
 Marley was dead, to begin with.
 
-grep -w -i [aeiou]t opening_lines.txt
+learner@:learning_unix$ grep -w -i [aeiou]t opening_lines.txt
 It was a pleasure to burn.
 It was a bright, cold day in April, and the clocks were striking thirteen.
 It was love at first sight.
@@ -94,6 +94,19 @@ When he was nearly thirteen, my brother Jem got his arm badly broken at the elbo
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

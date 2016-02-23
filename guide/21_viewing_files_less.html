@@ -14,18 +14,18 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="21-viewing-files-with-less">21: Viewing files with less</h2>
 <p>So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The <a href="http://en.wikipedia.org/wiki/Less_(Unix)">less</a> command lets you view (but not edit) text files. We will use the <a href="http://en.wikipedia.org/wiki/Echo_(command)">echo</a> command to put some text in a file and then view it:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ echo &quot;Call me Ishmael.&quot;
+<pre><code class="lang-bash">learner@:learning_unix$ echo &quot;Call me Ishmael.&quot;
 Call me Ishmael.
-learner@:~/learning_unix$ echo &quot;Call me Ishmael.&quot; &gt; opening_lines.txt
-learner@:~/learning_unix$ ls
+learner@:learning_unix$ echo &quot;Call me Ishmael.&quot; &gt; opening_lines.txt
+learner@:learning_unix$ ls
 opening_lines.txt
-learner@:~/learning_unix$ less opening_lines.txt
+learner@:learning_unix$ less opening_lines.txt
 </code></pre>
 <p>On its own, <code>echo</code> isn&#39;t a very exciting Unix command. It just echoes text back to the screen. But we can redirect that text into an output file by using the <code>&gt;</code> symbol. This allows for something called file <a href="http://en.wikipedia.org/wiki/Redirection_(Unix)">redirection</a>.</p>
 <blockquote>
 <p><strong><em>Careful when using file redirection (&gt;), it will overwrite any existing file of the same name</em></strong></p>
 </blockquote>
-<p>When you are using less, you can bring up a page of help commands by pressing <code>h</code>, scroll forward a page by pressing <code>space</code>, or go forward or backwards one line at a time by pressing <code>j</code> or <code>k</code>. To exit less, press <code>q</code> (for quit). The <code>less</code> program also does about a million other useful things (including text searching).</p>
+<p>When you are using less, you can bring up a page of help commands by pressing <code>h</code>, scroll forward a page by pressing <code>space</code>, or go forward or backwards one line at a time by pressing <code>j</code> or <code>k</code>. To exit less, press <code>q</code> (for quit). The <code>less</code> program also does many other useful things (including text searching).</p>
 
         <div class="navlinks">
           <a class="nextp button" href="22_viewing_files_cat.html">OK, next! &raquo;</a>
@@ -33,6 +33,19 @@ learner@:~/learning_unix$ less opening_lines.txt
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

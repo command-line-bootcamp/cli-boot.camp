@@ -13,10 +13,10 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="04-making-new-directories">04: Making new directories</h2>
-<p>If we want to make a new directory (e.g. to store some work related data), we can use the <a href="http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs">mkdir</a> command:</p>
+<p>If we want to make a new directory (e.g. to store some work related data), we can use the <a href="https://en.wikipedia.org/wiki/Mkdir">mkdir</a> command:</p>
 <pre><code class="lang-bash">learner@:~$ mkdir learning_unix
 learner@:~$ ls
-command_line_course  learning_unix  linux_bootcamp
+a_directory another_directory learning_unix
 </code></pre>
 
         <div class="navlinks">
@@ -25,6 +25,19 @@ command_line_course  learning_unix  linux_bootcamp
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

@@ -14,20 +14,33 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="17-moving-directories">17: Moving directories</h2>
 <p>It is important to understand that as long as you have specified a &#39;source&#39; and a &#39;target&#39; location when you are moving a file, then it doesn&#39;t matter what your <em>current</em> directory is. You can move or copy things within the same directory or between different directories regardless of whether you are in any of those directories. Moving directories is just like moving files:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ mv Temp/riches Temp/rags
-learner@:~/learning_unix$ mkdir Temp2
-learner@:~/learning_unix$ mv Temp2 Temp
-learner@:~/learning_unix$ ls Temp/
-earth.txt  heaven.txt  rags  Temp2
+<pre><code class="lang-bash">learner@:learning_unix$ mkdir temp2
+learner@:learning_unix$ mv temp2 temp
+learner@:learning_unix$ ls temp/
+earth.txt  heaven.txt  rags  temp2
 </code></pre>
-<p>This step moves the Temp2 directory inside the Temp directory. Try creating a &#39;Temp3&#39; directory inside &#39;learning_unix&#39; and then <code>cd</code> to <code>/tmp</code>. Can you move <code>Temp3</code> inside <code>Temp</code> without changing directory?</p>
+<p>This step moves the temp2 directory inside the temp directory. Try creating a &#39;temp3&#39; directory inside &#39;learning_unix&#39; and then <code>cd</code> to <code>/tmp</code>. Can you move <code>temp3</code> inside <code>temp2</code> without changing directory? When you are finished, <code>cd</code> back to 
+&#39;learning_unix&#39;.</p>
 
         <div class="navlinks">
           <a class="nextp button" href="18_removing_files.html">OK, next! &raquo;</a>
-            <a class="lastp navlink" href="16_moving_files.html">&laquo; back</a>
+            <a class="lastp navlink" href="16_renaming_files.html">&laquo; back</a>
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

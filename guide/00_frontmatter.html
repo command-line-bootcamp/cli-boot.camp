@@ -12,25 +12,17 @@
 
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
-      <p>Title:   Command-line Bootcamp Adventure
-Authors:  Keith Bradnam, Richard Smith-Unna
-Date:    2015-12-01
-Version: 1</p>
-<h1 id="command-line-bootcamp">Command-line Bootcamp</h1>
-<blockquote>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-</blockquote>
-<p>Please post feedback at <a href="https://github.com/blahah/unix_for_biologists">https://github.com/blahah/unix_for_biologists</a></p>
-<h2 id="introduction-introduction-">Introduction [Introduction]</h2>
+      <h1 id="command-line-bootcamp">Command-line Bootcamp</h1>
+<h2 id="introduction">Introduction</h2>
 <p>This &#39;bootcamp adventure&#39; is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, edit files. It will also introduce a brief overview of some &#39;power&#39; commands in Unix.</p>
-<h2 id="why-unix-why-unix-">Why Unix? [Why Unix]</h2>
+<h2 id="why-unix-">Why Unix?</h2>
 <p>The <a href="http://en.wikipedia.org/wiki/Unix">Unix operating system</a> has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it&#39;s much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including <a href="http://en.wikipedia.org/wiki/Linux">Linux</a>), though the differences do not matter much for most basic functions.</p>
-<p>Increasingly, the raw output of biological research exists as <em>in silico</em> data, usually in the form of large text files. Unix is particularly suited to working with such files and has  several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things.</p>
-<h2 id="typeset-conventions-typeset-">Typeset Conventions [Typeset]</h2>
-<p>Command-line examples that you are meant to type into a terminal window will be shown indented in a constant-width font, e.g.</p>
+<p>Unix is particularly suited to working with text files, even very large ones, and has several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things.</p>
+<h2 id="how-to-read-this-tutorial">How to read this tutorial</h2>
+<p>Command-line examples that you are meant to type into a terminal window, and the results of those examples, will be shown in a black code block, e.g.</p>
 <pre><code class="lang-bash">ls -lrh
 </code></pre>
-<p>Sometimes the accompanying text will include a reference to a Unix command. Any such text will also  be in a constant-width, boxed font. E.g.</p>
+<p>Sometimes the accompanying text will include a reference to a Unix command. Any such text will also be in a constant-width, boxed font. E.g.</p>
 <blockquote>
 <p>Type the <code>pwd</code> command.</p>
 </blockquote>
@@ -44,6 +36,19 @@ Version: 1</p>
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

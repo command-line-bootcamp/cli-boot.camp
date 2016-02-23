@@ -15,22 +15,21 @@
       <h2 id="01-your-first-unix-command">01. Your first Unix command</h2>
 <p>It&#39;s important to note that you will always be <em>inside</em> a single directory when using the terminal. The default behavior is that when you open a new terminal you start in your own <em>home</em> directory (containing files and directories that only you can modify). To see what files and directories are in our home directory, we need to use the <a href="http://en.wikipedia.org/wiki/Ls">ls</a> command. This command lists the contents of a directory. If we run the <code>ls</code> command we should see something like:</p>
 <pre><code class="lang-bash">learner@:~$ ls
-command_line_course  linux_bootcamp
+a_directory another_directory
 learner@:~$
 </code></pre>
-<p>There are four things that you should note here:</p>
+<p>There are three things that you should note here:</p>
 <ol>
-<li>You will probably see different output to what is shown here, it depends on your computer setup. Don&#39;t worry about that for now.</li>
-<li>The <code>learner@:~$</code> text that you see is the Unix <a href="http://en.wikipedia.org/wiki/Command_line_interface">command prompt</a>. In this case, it contains a user name (&#39;ubuntu&#39;) and the name of the current directory (&#39;~&#39;, more on that later). Note that the command prompt might not look the same on different Unix systems. In this case, the <code>$</code> sign marks the end of the prompt.</li>
-<li>The output of the <code>ls</code> command lists two things. In this case, they are both directories, but they could also be files. We&#39;ll learn how to tell them apart later on. These directories were created as part of a specific course that used this bootcamp material. You will therefore probably see something very different on your own computer.</li>
+<li>The <code>learner@:~$</code> text that you see is the Unix <a href="http://en.wikipedia.org/wiki/Command_line_interface">command prompt</a>. In this case, it contains a user name (&#39;learner&#39;) and the name of the current directory (&#39;~&#39;, more on that later). Note that the command prompt might not look the same on different Unix systems. In this case, the <code>$</code> sign marks the end of the prompt.</li>
+<li>The output of the <code>ls</code> command lists two things. In this case, they are both directories, but they could also be files. We&#39;ll learn how to tell them apart later on.</li>
 <li>After the <code>ls</code> command finishes it produces a new command prompt, ready for you to type your next command.</li>
 </ol>
 <p>The <code>ls</code> command is used to list the contents of <em>any</em> directory, not necessarily the one that you are currently in. Try the following:</p>
-<pre><code class="lang-bash">learner@:~$ ls /data
-bioinfo.course.data  command_line_course  galaxy  lost+found  refs
+<pre><code class="lang-bash">learner@:~$ ls /
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 
 learner@:~$ ls /etc/perl
-CPAN  Net  XML
+CPAN  Net
 </code></pre>
 
         <div class="navlinks">
@@ -39,6 +38,19 @@ CPAN  Net  XML
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

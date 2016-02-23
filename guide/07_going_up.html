@@ -15,9 +15,9 @@
       <h2 id="07-navigating-upwards-in-the-unix-filesystem">07: Navigating upwards in the Unix filesystem</h2>
 <p>Frequently, you will find that you want to go &#39;upwards&#39; one level in the directory hierarchy. Two dots <code>..</code> are used in Unix to refer to the <em>parent</em> directory of wherever you are. Every directory has a parent except the root level of the computer. Let&#39;s go into the <code>learning_unix</code> directory and then navigate up two levels:</p>
 <pre><code class="lang-bash">learner@:~$ cd learning_unix/
-learner@:~/learning_unix$ cd ..
+learner@:learning_unix$ cd ..
 learner@:~$ cd ..
-learner@:/home$
+learner@:home$
 </code></pre>
 <p>What if you wanted to navigate up <em>two</em> levels in the file system in one go? It&#39;s very simple, just use two sets of the <code>..</code> operator, separated by a forward slash:</p>
 <pre><code class="lang-bash">cd ../..
@@ -29,6 +29,19 @@ learner@:/home$
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

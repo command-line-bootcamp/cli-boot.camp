@@ -14,13 +14,16 @@
         <p><a href="index.html">table of contents</a></p>
       <h2 id="22-viewing-files-with-cat">22: Viewing files with cat</h2>
 <p>Let&#39;s add another line to the file:</p>
-<pre><code class="lang-bash">learner@:~/learning_unix$ echo &quot;The primroses were over.&quot; &gt;&gt; opening_lines.txt
-learner@:~/learning_unix$ cat opening_lines.txt
+<pre><code class="lang-bash">learner@:learning_unix$ echo &quot;The primroses were over.&quot; &gt;&gt; opening_lines.txt
+learner@:learning_unix$ cat opening_lines.txt
 Call me Ishmael.
 The primroses were over.
 </code></pre>
 <p>Notice that we use <code>&gt;&gt;</code> and not just <code>&gt;</code>. This operator will <strong>append</strong> to a file. If we only used <code>&gt;</code>, we would end up overwriting the file. The <a href="http://en.wikipedia.org/wiki/Cat_(Unix)">cat</a> command displays the contents of the file (or files) and then returns you to the command line. Unlike <code>less</code> you have no control on how you view that text (or what you do with it). It is a very simple, but sometimes useful, command. You can use <code>cat</code> to quickly combine multiple files or, if you wanted to, make a copy of an existing file:</p>
-<pre><code class="lang-bash">cat opening_lines.txt &gt; file_copy.txt
+<pre><code class="lang-bash">learner@:learning_unix$ cat opening_lines.txt &gt; file_copy.txt
+</code></pre>
+<p>And again, let&#39;s clean up the redundant file:</p>
+<pre><code class="lang-bash">learner@:learning_unix rm file_copy.txt
 </code></pre>
 
         <div class="navlinks">
@@ -29,6 +32,19 @@ The primroses were over.
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>

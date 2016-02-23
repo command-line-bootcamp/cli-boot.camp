@@ -13,11 +13,13 @@
       <section class="content">
         <p><a href="index.html">table of contents</a></p>
       <h2 id="08-absolute-and-relative-paths">08: Absolute and relative paths</h2>
-<p>Using <code>cd ..</code> allows us to change directory <em>relative</em> to where we are now. You can also always change to a directory based on its <em>absolute</em> location. E.g. if you are working in the <code>/home/ubuntu/learning_unix</code> directory and you then want to change to the <code>/tmp</code> directory, then you could do either of the following:</p>
-<pre><code>$ cd ../../../tmp
-</code></pre><p>or...</p>
-<pre><code>$ cd /tmp
-</code></pre><p>They both achieve the same thing, but the 2nd example requires that you know about the full <em>path</em> from the root level of the computer to your directory of interest (the &#39;path&#39; is an important concept in Unix). Sometimes it is quicker to change directories using the relative path, and other times it will be quicker to use the absolute path.</p>
+<p>Using <code>cd ..</code> allows us to change directory <em>relative</em> to where we are now. You can also always change to a directory based on its <em>absolute</em> location. E.g. if you are working in the <code>/home/learner/learning_unix</code> directory and you then want to change to the <code>/tmp</code> directory, then you could do either of the following:</p>
+<pre><code class="lang-bash">learner@:learning_unix$ cd ../../../tmp
+</code></pre>
+<p>or...</p>
+<pre><code class="lang-bash">learner@:learning_unix$ cd /tmp
+</code></pre>
+<p>They both achieve the same thing, but the 2nd example requires that you know about the full <em>path</em> from the root level of the computer to your directory of interest (the &#39;path&#39; is an important concept in Unix). Sometimes it is quicker to change directories using the relative path, and other times it will be quicker to use the absolute path.</p>
 
         <div class="navlinks">
           <a class="nextp button" href="09_going_home.html">OK, next! &raquo;</a>
@@ -25,6 +27,19 @@
         </div>
     </section>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
 </body>
 </html>
