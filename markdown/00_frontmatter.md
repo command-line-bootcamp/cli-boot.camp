@@ -23,7 +23,7 @@ ls -lrh
 
 Sometimes the accompanying text will include a reference to a Unix command. Any such text will also be in a constant-width, boxed font. E.g.
 
->Type the `pwd` command again.
+>Type the `pwd` command.
 
 From time to time this documentation will contain [web links][] to pages that will help you find out more about certain Unix commands. Usually, the _first_ mention of a command or function will be a hyperlink to Wikipedia. Important or critical points will be styled like so:
 

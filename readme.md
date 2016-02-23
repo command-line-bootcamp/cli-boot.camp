@@ -2,12 +2,9 @@
 
 Learn the unix command-line by using it in your browser.
 
-Contents of this README:
+### contributors
 
-- [build and deploy the frontend](#build-and-deploy-the-frontend)
-- [setup and run the docker server backend](#setup-and-run-the-docker-server-backend)
-- [cleaning up long-running containers](#cleaning-up-long-running-containers)
-- [using the framework for a different course](#using-the-framework-for-a-different-course)
+- [@jessicamizzi](https://github/jessicamizzi)
 
 ### build and deploy the frontend
 
@@ -79,13 +76,3 @@ Sometimes people leave their browser windows open for a really long time. If you
 ```bash
 docker stop $(docker ps | grep hours | cut -d ' ' -f1 | paste - - - - )
 ```
-
-### using the framework for a different course
-
-The setup used in this app can easily be adapted to other command-line based courses. The steps are as follows:
-
-1. Get your course material in markdown format.
-2. Organise the content into one markdown file per tutorial unit, and name the files with a two-digit leading number, followed by the unit name, followed by the `.md` extension. For example `01_first_chapter.md`, `02_moving_on.md`, etc.
-3. Clone this repo and replace the content of the `markdown` directory with your markdown tutorial files.
-4. Edit `guide.html` to describe your course.
-5. Follow the procedure in the sections ['build and deploy the frontend'](#build-and-deploy-the-frontend) and ['setup and run the docker server backend'](#setup-and-run-the-docker-server-backend)
