@@ -1,6 +1,6 @@
 {
   "name": "command_line_bootcamp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an adventure in learning the command-line",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "noprompt": "true"
   },
   "dependencies": {
-    "adventure-time": "^1.0.0",
+    "adventure-time": "blahah/adventure-time#fixes",
     "gh-pages-deploy": "^0.1.1",
     "submarine": "0.2.4"
   },
