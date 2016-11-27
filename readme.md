@@ -4,7 +4,7 @@ Learn the unix command-line by using it in your browser.
 
 ### contributors
 
-- [@jessicamizzi](https://github/jessicamizzi)
+- [@jessicamizzi](https://github.com/jessicamizzi)
 
 ### build and deploy the frontend
 
