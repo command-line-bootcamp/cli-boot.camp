@@ -1,6 +1,6 @@
 ## 02: The Unix tree
 
-![Unix File Tree](/static/img/Org_Chart_Cacoo_Linux_Tree_John-CC-BY-SA-Tr3quart1sta.png)
+![Unix File Tree](static/img/Org_Chart_Cacoo_Linux_Tree_John-CC-BY-SA-Tr3quart1sta.png)
 
 Looking at directories from within a Unix terminal can often seem confusing. But bear in mind that these directories are exactly the same type of folders that you can see if you use any graphical file browser. From the *root* level (`/`) there are usually around 20 directories. You can treat the root directory like any other, e.g. you can list its contents with `ls`:
 
