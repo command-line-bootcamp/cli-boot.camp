@@ -55,8 +55,8 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | b
 source ~/.bashrc
 
 # some dependencies don't work with node 1+, so stick with 0.12
-nvm install 0.12
-nvm use 0.12
+nvm install 4.1
+nvm use 4.1
 
 # major dependencies
 npm install --global docker-browser-server
