@@ -5,6 +5,8 @@ Learn the unix command-line by using it in your browser.
 ### contributors
 
 - [@jessicamizzi](https://github.com/jessicamizzi)
+- [@gedankenstuecke](https://github.com/gedankenstuecke)
+- [@alexmorley](https://github.com/alexmorley) *<- responsible for this project still working* 💜
 
 ### build and deploy the frontend
 
