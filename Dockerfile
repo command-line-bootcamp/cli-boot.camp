@@ -3,7 +3,7 @@
 # docker build -t "command_line_bootcamp" .
 # docker-browser-server command_line_bootcamp -p 8080
 
-FROM ubuntu
+FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y curl git python build-essential nano man
 
