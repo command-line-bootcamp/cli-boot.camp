@@ -56,7 +56,7 @@ apt-get install -y build-essential g++
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 source ~/.bashrc
 
-# some dependencies don't work with node 1+, so stick with 0.12
+# use node version 4.1
 nvm install 4.1
 nvm use 4.1
 
