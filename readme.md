@@ -33,6 +33,8 @@ npm install
 Make your changes (if any) and then deploy:
 
 ```bash
+npm install gh-pages-deploy -g
+
 npm run deploy
 ```
 
