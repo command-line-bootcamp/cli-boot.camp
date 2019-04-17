@@ -22,8 +22,8 @@ then ssh in and...
 tmux
 
 # need some basics
-apt-get update
-apt-get install -y build-essential g++
+sudo apt-get update
+sudo apt-get install -y build-essential g++
 
 # install and set up nvm and node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
