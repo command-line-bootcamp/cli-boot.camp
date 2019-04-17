@@ -8,6 +8,43 @@ Learn the unix command-line by using it in your browser.
 - [@gedankenstuecke](https://github.com/gedankenstuecke)
 - [@alexmorley](https://github.com/alexmorley) *<- responsible for this project still working* 💜
 
+
+### setup and run the docker server backend
+
+Instructions for running on digitalocean:
+
+Create a new instance of the Ubuntu+docker image.
+
+then ssh in and...
+
+```bash
+# keep it running
+tmux
+
+# need some basics
+apt-get update
+apt-get install -y build-essential g++
+
+# install and set up nvm and node
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+source ~/.bashrc
+
+# use node version 4.1
+nvm install 4.1
+nvm use 4.1
+
+# major dependencies
+npm install --global docker-browser-server
+
+# setup docker
+sudo docker pull ubuntu
+cd command_line_bootcamp
+sudo docker build -t "command_line_bootcamp" .
+
+# run
+docker-browser-server command_line_bootcamp -p 8080
+```
+
 ### build and deploy the frontend
 
 You'll need node.js
@@ -41,41 +78,7 @@ npm run start 8081
 ```
 
 
-### setup and run the docker server backend
 
-Instructions for running on digitalocean:
-
-Create a new instance of the Ubuntu+docker image.
-
-then ssh in and...
-
-```bash
-# keep it running
-tmux
-
-# need some basics
-apt-get update
-apt-get install -y build-essential g++
-
-# install and set up nvm and node
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-source ~/.bashrc
-
-# use node version 4.1
-nvm install 4.1
-nvm use 4.1
-
-# major dependencies
-npm install --global docker-browser-server
-
-# setup docker
-sudo docker pull ubuntu
-cd command_line_bootcamp
-docker build -t "command_line_bootcamp" .
-
-# run
-docker-browser-server command_line_bootcamp -p 8080
-```
 
 
 ### cleaning up long-running containers
