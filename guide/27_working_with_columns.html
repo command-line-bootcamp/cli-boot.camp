@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="27-working-with-columns">27: Working with columns</h2>
+<p>Along your &quot;command line adventures&quot;, you will encounter many files that are divided in columns, such as &quot;csv&quot; or &quot;tsv&quot; files.</p>
+<p>Fortunately, unix has many tools to handle and manipulate this type of files.</p>
+<p>First let&#39;s download ourselves a test file and look at it&#39;s contents:</p>
+<pre><code class="lang-bash">cd
+curl https://raw.githubusercontent.com/Blahah/command_line_bootcamp/master/testfiles/grades.txt &gt; grades.txt
+less testfile.vcf
+</code></pre>
+<p><code>curl</code> will download the contents of any URL you provide it and print it to STDOUT. Since we want our test file on the filesystem, we redirect the output of <code>curl</code> to the file &quot;grades.txt&quot;</p>
+<p>As you can see, this file containing hypothetical grades for hypothetical characters. First of all, one character stands out - &quot;Spock&quot;, as he aces every class. Let&#39;s extract his information:</p>
+<pre><code class="lang-bash">cut -f 5 grades.txt
+</code></pre>
+<p>This command provides us with all the rows for column &quot;5&quot; (-f 5), which contains the grades for &quot;Spock&quot; and prints it to STDOUT. Neat, hum?</p>
+<p>What else stands out here? &quot;Luke&quot; has a value of 150 where the maximum is 100. He&#39;s probably &quot;forcing&quot; that grade, and that&#39;s cheating. Speaking of cheaters, Malcom is a known cheater, and his scores of 50 on everything raise suspicions. Let&#39;s remove both these students from our file.</p>
+<pre><code class="lang-bash">cut -f -2,4-7,9 grades.txt &gt; grades_no_cheaters.txt
+</code></pre>
+<p>Ok, there is a lot to sink in here. First, the syntax of what the &quot;-f&quot; argument takes: the &quot;-&quot; means &quot;everything up to&quot; when used as the first character, but also means &quot;everything between&quot; when used between two other values (it also can mean &quot;everything after&quot; if used as the last character). Note that we are separating values with &quot;,&quot;. The <code>&gt; grades_no_cheaters.txt</code> will redirect the output into a new file.</p>
+<p>Ok, so now let&#39;s add back the cheaters as the last columns of our grades file.</p>
+<pre><code class="lang-bash">cut -f 3,8 grades.txt | paste grades_no_cheaters.txt - &gt; sorted_grades.txt
+</code></pre>
+<p>Easy, wasn&#39;t it? We just cut back the names of the cheaters and then &quot;piped&quot; them to paste which placed the columns in the end of the grades file. The &quot;-&quot; here means &quot;read from STDIN&quot;, and we could use another file instead, to merge the contents of both files.</p>
+<p>There you have it. Now all you have to do is read <code>sorted_grades.txt</code> and figure out what to do with the cheating students.</p>
+
+        <div class="navlinks">
+          <a class="nextp button" href="28_combining_commands.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="26_matching_lines.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
+</body>
+</html>
