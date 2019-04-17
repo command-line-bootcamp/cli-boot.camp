@@ -34,8 +34,9 @@ Make your changes (if any) and then deploy:
 
 ```bash
 npm run deploy
-
-# run
+```
+run:
+```bash
 npm run start 8081
 ```
 
@@ -73,7 +74,6 @@ cd command_line_bootcamp
 docker build -t "command_line_bootcamp" .
 
 # run
-
 docker-browser-server command_line_bootcamp -p 8080
 ```
 
