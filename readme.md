@@ -38,6 +38,7 @@ npm install --global docker-browser-server
 
 # setup docker
 sudo docker pull ubuntu
+https://github.com/ascendo/command_line_bootcamp
 cd command_line_bootcamp
 sudo docker build -t "command_line_bootcamp" .
 
