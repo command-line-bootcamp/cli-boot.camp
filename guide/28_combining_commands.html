@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="28-combining-unix-commands-with-pipes">28: Combining Unix commands with pipes</h2>
+<p>One of the most powerful features of Unix is that you can send the output from one command or program to any other command (as long as the second command accepts input of some sort). We do this by using what is known as a <a href="http://en.wikipedia.org/wiki/Pipe_(Unix)">pipe</a>. This is implemented using the &#39;|&#39; character (which is a character which always seems to be on different keys depending on the keyboard that you are using). Think of the pipe as simply connecting two Unix programs. Here&#39;s an example which introduces some new Unix commands:</p>
+<pre><code class="lang-bash">learner@:learning_unix$ 
+grep was opening_lines.txt | wc -c
+316
+
+learner@:learning_unix$
+grep was opening_lines.txt | sort | head -n 3 | wc -c
+130
+</code></pre>
+<p>The first use of <code>grep</code> searches the specified file for lines matching &#39;was&#39;, it sends the lines that match through a pipe to the <code>wc</code> program. We use the <code>-c</code> option to just count characters in the matching lines (316).</p>
+<p>The second example first sends the output of <code>grep</code> to the Unix <code>sort</code> command. This sorts a file alphanumerically by default. The sorted output is sent to the <code>head</code> command which by default shows the first 10 lines of a file. We use the <code>-n</code> option of this command to only show 3 lines. These 3 lines are then sent to the <code>wc</code> command as before.</p>
+<blockquote>
+<p><strong><em>Whenever making a long pipe, test each step as you build it!</em></strong></p>
+</blockquote>
+
+        <div class="navlinks">
+          <a class="nextp button" href="29_power_commands.html">OK, next! &raquo;</a>
+            <a class="lastp navlink" href="27_working_with_columns.html">&laquo; back</a>
+        </div>
+    </section>
+  </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
+</body>
+</html>
