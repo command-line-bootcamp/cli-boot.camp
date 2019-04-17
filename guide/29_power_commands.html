@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+<body>
+  <div class="wrapper">
+
+      <section class="content">
+        <p><a href="index.html">table of contents</a></p>
+      <h2 id="28-miscellaneous-unix-power-commands">28: Miscellaneous Unix power commands</h2>
+<p>The following examples introduce some other Unix commands, and show how they could be used to work on a fictional file called <code>file.txt</code>. Remember, you can always learn more about these Unix commands from their respective man pages with the <code>man</code> command. These are not all real world cases, but rather show the diversity of Unix command-line tools:</p>
+<ul>
+<li>View the penultimate 10 lines of a file (using <a href="http://en.wikipedia.org/wiki/Head_(Unix)">head</a> and <a href="http://en.wikipedia.org/wiki/Tail_(Unix)">tail</a> commands):</li>
+</ul>
+<pre><code class="lang-bash">tail -n 20 file.txt | head
+</code></pre>
+<ul>
+<li>Show lines of a file that begin with a start codon (ATG) (the <code>^</code> matches patterns at the start of a line):</li>
+</ul>
+<pre><code class="lang-bash">grep &quot;^ATG&quot; file.txt
+</code></pre>
+<ul>
+<li>Cut out the 3rd column of a tab-delimited text file and sort it to only show unique lines (i.e. remove duplicates):</li>
+</ul>
+<pre><code class="lang-bash">cut -f 3 file.txt | sort -u
+</code></pre>
+<ul>
+<li>Count how many lines in a file contain the words &#39;cat&#39; or &#39;bat&#39; (<code>-c</code> option of <code>grep</code> counts lines):</li>
+</ul>
+<pre><code class="lang-bash">grep -c &#39;[bc]at&#39; file.txt
+</code></pre>
+<ul>
+<li>Turn lower-case text into upper-case (using <a href="http://en.wikipedia.org/wiki/Tr_(Unix)">tr</a> command to &#39;transliterate&#39;):</li>
+</ul>
+<pre><code class="lang-bash">tr &#39;a-z&#39; &#39;A-Z&#39; &lt; file.txt
+</code></pre>
+<ul>
+<li>Change all occurences of &#39;Chr1&#39; to &#39;Chromosome 1&#39; and write changed output to a new file (using <a href="http://en.wikipedia.org/wiki/Sed">sed</a> command):</li>
+</ul>
+<pre><code class="lang-bash">sed &#39;s/Chr1/Chromosome 1/g&#39; file.txt &gt; file2.txt
+</code></pre>
+
+        <div class="navlinks">
+        </div>
+    </section>
+  </div>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>
+    function neaten(str) {
+      var pieces = str.split('_');
+      var s = pieces[1];
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      pieces[1] = s;
+      return pieces.join(' ');
+    }
+    $('.toc-list li a').text(function() {
+      return neaten($(this).text());
+    });
+  </script>
+</body>
+</html>
