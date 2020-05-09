@@ -5,6 +5,8 @@ Learn the unix command-line by using it in your browser.
 ### contributors
 
 - [@jessicamizzi](https://github.com/jessicamizzi)
+- [@gedankenstuecke](https://github.com/gedankenstuecke)
+- [@alexmorley](https://github.com/alexmorley) *<- responsible for this project still working* 💜
 
 ### build and deploy the frontend
 
@@ -54,9 +56,9 @@ apt-get install -y build-essential g++
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 source ~/.bashrc
 
-# some dependencies don't work with node 1+, so stick with 0.12
-nvm install 0.12
-nvm use 0.12
+# use node version 4.1
+nvm install 4.1
+nvm use 4.1
 
 # major dependencies
 npm install --global docker-browser-server
