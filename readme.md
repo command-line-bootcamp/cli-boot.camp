@@ -71,6 +71,48 @@ docker build -t "command_line_bootcamp" .
 docker-browser-server command_line_bootcamp -p 8080
 ```
 
+
+## Maintainer section
+\* probably only relevant for maintainers or if you run a public version of this site somewhere else
+
+### public docker server backend
+If you want to run this on a public site with https enabled then you'll need to setup the websocket backend run run on ssl too (`wss://`).
+
+- set up a certificate for the address that points to the backend
+
+- set up nginx as an ssl terminator and install the new certificates
+
+- run docker-browser-server on a differnt port so it doesn't conflict with nginx (8000 here)
+
+```nginx
+server {
+    listen 8080;
+    listen 8443 ssl;
+    server_name command-line-bootcamp-backend.alexmorley.me
+
+    # Cloudflare can generate al of these files for you.
+    ssl on;
+    ssl_certificate         /etc/nginx/ssl/command-line-bootcamp-backend.alexmorley.me/server.pem;
+    ssl_certificate_key     /etc/nginx/ssl/command-line-bootcamp-backend.alexmorley.me/server.key;
+    ssl_trusted_certificate /etc/nginx/ssl/command-line-bootcamp-backend.alexmorley.me/cloudflare_origin_rsa.pem;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+
+        # Need these headers to upgrade http connection to websocket
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+
+        # These you might not need
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
 ### cleaning up long-running containers
 
 Sometimes people leave their browser windows open for a really long time. If you don't want to fund the docker container running for that time, you can clean up long-running containers:
