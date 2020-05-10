@@ -1,12 +1,17 @@
 # Command-line bootcamp
 
-Learn the unix command-line by using it in your browser.
+Learn the unix command-line by using it in your browser. 
+
+This is the current link :link: https://alexmorley.me/command_line_bootcamp/?secure=T. The one in the project description does not work at the moment!
 
 ### contributors
 
 - [@jessicamizzi](https://github.com/jessicamizzi)
 - [@gedankenstuecke](https://github.com/gedankenstuecke)
 - [@alexmorley](https://github.com/alexmorley) *<- responsible for this project still working* 💜
+
+
+## Contributing
 
 ### build and deploy the frontend
 
@@ -72,7 +77,7 @@ docker-browser-server command_line_bootcamp -p 8080
 ```
 
 
-## Maintainer section
+## Maintainers
 \* probably only relevant for maintainers or if you run a public version of this site somewhere else
 
 ### public docker server backend
