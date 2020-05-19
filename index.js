@@ -13,7 +13,8 @@ var opts = {
   guide: 'guide/',
   console: 'terminal.html',
   server: "command-line-bootcamp-backend.alexmorley.me:8443",
-  id: qs.id
+  id: qs.id,
+  secure: true,
 }
 
 if (!qs.server) qs.server = opts.server
