@@ -4,6 +4,7 @@ Learn the unix command-line by using it in your browser.
 
 ### contributors
 
+- [@blahah](https://github.com/blahah)
 - [@jessicamizzi](https://github.com/jessicamizzi)
 - [@gedankenstuecke](https://github.com/gedankenstuecke)
 - [@alexmorley](https://github.com/alexmorley) *<- responsible for this project still working* 💜
