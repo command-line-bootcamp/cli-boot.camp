@@ -24,7 +24,7 @@
     "noprompt": "true"
   },
   "dependencies": {
-    "adventure-time": "blahah/adventure-time#fixes",
+    "adventure-time": "command-line-bootcamp/adventure-time",
     "gh-pages-deploy": "^0.1.1",
     "submarine": "0.2.4"
   },
