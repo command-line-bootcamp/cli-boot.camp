@@ -26,7 +26,7 @@ WORKDIR /home/learner
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 
 # change it to your required node version
-ENV NODE_VERSION 5.1.0
+ENV NODE_VERSION 12.18.3
 
 # needed by nvm install
 ENV NVM_DIR /home/learner/.nvm
