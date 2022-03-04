@@ -12,7 +12,7 @@ if (!qs.id) {
 var opts = {
   guide: 'guide/',
   console: 'terminal.html',
-  server: "command-line-bootcamp-backend.alexmorley.me:8443",
+  server: "clibootcamp-cluster.pipe-to.cat:8080",
   id: qs.id,
   secure: true,
 }
